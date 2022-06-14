@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+<link href="assets/images/favicon.png" rel="icon" />
+<title>Documentation | Your ThemeForest item Name</title>
+<meta name="description" content="Your ThemeForest item Name and description">
+<meta name="author" content="harnishdesign.net">
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@0.26.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/showdown@latest/dist/showdown.min.js"></script>
+
+
+<!-- Stylesheet
+============================== -->
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+<!-- Font Awesome Icon -->
+<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
+<!-- Magnific Popup -->
+<link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css" />
+<!-- Highlight Syntax -->
+<link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
+<!-- Custom Stylesheet -->
+<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="lds-ellipsis">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<!-- Preloader End --> 
+
+<!-- Document Wrapper   
+=============================== -->
+<div id="main-wrapper"> 
+  
+  <!-- Header
+  ============================ -->
+  <header id="header" class="sticky-top"> 
+    <!-- Navbar -->
+    <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+      <div class="container-fluid">
+        <!-- Sidebar Toggler -->
+		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+		
+		<!-- Logo --> 
+        <a class="logo ml-md-3" href="index.html" title="iDocs Template"> <img src="assets/images/logo.png" alt="iDocs Template"/> </a> 
+		<span class="text-2 ml-2">v1.0</span> 
+        <!-- Logo End -->
+        
+		<!-- Navbar Toggler -->
+		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
+        
+		<div id="header-nav" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="dropdown"> <a class="dropdown-toggle" href="#">Dropdown</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Dropdown Action</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="index.html">Action</a></li>
+                    <li><a class="dropdown-item" href="feature-header-dark.html">Another Action</a></li>
+                    <li><a class="dropdown-item" href="feature-header-primary.html">Something Else Here</a></li>
+                    <li><a class="dropdown-item" href="index-2.html">Another Link</a></li>
+                  </ul>
+                </li>
+                <li><a class="dropdown-item" href="#">Another Action</a>
+                <li><a class="dropdown-item" href="#">Something Else Here</a></li>
+              </ul>
+            </li>
+            <li><a target="_blank" href="https://themeforest.net/user/harnishdesign/portfolio?ref=HarnishDesign">Other Template</a></li>
+            <li><a target="_blank" href="https://themeforest.net/user/harnishdesign/#contact?ref=HarnishDesign">Support</a></li>
+          </ul>
+        </div>
+      <!--   <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+          <li class="social-icons-twitter"><a data-toggle="tooltip" href="http://www.twitter.com/harnishdesign/" target="_blank" title="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+          <li class="social-icons-facebook"><a data-toggle="tooltip" href="http://www.facebook.com/harnishdesign/" target="_blank" title="" data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+          <li class="social-icons-dribbble"><a data-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/" target="_blank" title="" data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
+        </ul> -->
+      </div>
+    </nav>
+    <!-- Navbar End --> 
+  </header>
+  <!-- Header End --> 
+  
+  <!-- Content
+  ============================ -->
+  <div id="content" role="main">
+    
+	<!-- Sidebar Navigation
+	============================ -->
+	<div class="idocs-navigation bg-light">
+      <ul class="nav flex-column ">
+
+        <li v-for="i of config.sections" class="nav-item">
+          <a class="nav-link active" @click="section(i)" href="#idocs_start">{{ i.title }}</a>
+          <ul v-if="active === i" class="nav flex-column">
+            <li v-for="item of active.titles" class="nav-item"><a class="nav-link" :href="'#' + item.href">{{ item.title }}</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" href="#idocs_html_structure">HTML Structure</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_sass">Sass</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_color_schemes">Color Schemes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_theme_customization">Customization</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_logo_settings">Logo Settings</a></li> -->
+          </ul>
+        </li>
+
+      <!--   <li class="nav-item"><a class="nav-link" href="#idocs_layout">Layout</a>
+          <ul class="nav flex-column">
+			<li class="nav-item"><a class="nav-link" href="#idocs_header">Header</a></li>
+			<li class="nav-item"><a class="nav-link" href="#idocs_navbar">Navbar</a></li>
+			<li class="nav-item"><a class="nav-link" href="#idocs_sidebar">Sidebar</a></li>
+			<li class="nav-item"><a class="nav-link" href="#idocs_footer">Footer</a></li>
+			<li class="nav-item"><a class="nav-link" href="#idocs_box_layout">Box Layout</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="#idocs_content">Content</a>
+			<ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#idocs_typography">Typography</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_code">Code</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_table">Table</a></li>
+			<li class="nav-item"><a class="nav-link" href="#idocs_icons">Icons</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_image">Image</a></li>
+			<li class="nav-item"><a class="nav-link" href="#idocs_video">Video</a></li>
+          </ul>
+		</li>
+
+        <li class="nav-item"><a class="nav-link" href="#idocs_components">Components</a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#idocs_accordion">Accordion</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_tabs">Tabs</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_social_icon">Social Icon</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_helper_classes">Helper Classes</a></li>
+          </ul>
+        </li> -->
+
+		<li class="nav-item"><a class="nav-link" href="#idocs_faq">FAQ</a></li>
+		<li class="nav-item"><a class="nav-link" href="#idocs_changelog">Changelog</a>
+        <li class="nav-item"><a class="nav-link" href="#idocs_source_credits">Credits</a></li>
+			<ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#v1-1">v1.1</a></li>
+            <li class="nav-item"><a class="nav-link" href="#v1-0">v1.0</a></li>
+          </ul>
+		</li>
+
+      </ul>
+    </div>
+    
+    <!-- Docs Content
+	============================ -->
+    <div class="idocs-content">
+      <div class="container"> 
+        
+        <!-- Getting Started
+		============================ -->
+        <section id="idocs_start">
+        <h1>{{ active.title }}</h1>
+        <h2>{{ active.tagline }}</h2>
+        <p class="lead">{{ active.description }}</p>
+		<hr>
+		<div class="row">
+			<div class="col-sm-6 col-lg-4">
+				<ul class="list-unstyled">
+					<li><strong>Version:</strong> {{ active.version }}</li>
+					<li><strong>Author:</strong> <a href="http://www.harnishdesign.net" target="_blank">{{ active.author }}</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-6 col-lg-4">
+				<ul class="list-unstyled">
+					<li><strong class="font-weight-700">Created:</strong> {{ active.created }}</li>
+					<li><strong>Updated:</strong> {{ active.updated }}</li>
+				</ul>
+			</div>
+		</div>
+        <p class="alert alert-info">{{ active.notice }}</p>
+        </section>
+        
+		<hr class="divider">
+
+        <div v-html="parseMarkdown(active.template)"></div>
+		
+        <hr class="divider">
+
+		<!-- FAQ
+		============================ -->
+		<section v-if="config.faq" id="idocs_faq">
+          
+          <h2>FAQ</h2>
+
+          <!-- <p class="text-4">A FAQ is a list of frequently asked questions (FAQs) and answers on a particular topic.</p> -->
+          
+		  <div class="row">
+          <div class="col-lg-12">
+            <div class="accordion accordion-alterate arrow-right" id="popularTopics">
+
+              <div v-for="i in config.faq" class="card">
+                <div class="card-header" id="heading1">
+                  <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">{{ i.title }}</a> </h5>
+                </div>
+                <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#popularTopics">
+                  <div class="card-body">{{ i.body }}</div>
+                </div>
+              </div>
+             
+              
+            </div>
+          </div>
+        </div>
+          
+        </section>
+        
+		<hr v-if="config.changelog" class="divider">
+
+        <section v-if="config.changelog" id="idocs_changelog">
+
+          <h2>Changelog</h2>
+
+          <!-- <p class="text-4">See what's new added, changed, fixed, improved or updated in the latest versions. </p> -->
+		  
+          <!-- <p class="alert alert-info mb-5"> For Future Updates Follow Us <a target="_blank" href="http://themeforest.net/user/harnishdesign?ref=HarnishDesign">@themeforest</a> / <a target="_blank" href="http://facebook.com/harnishdesign">@facebook</a> / <a target="_blank" href="http://twitter.com/harnishdesign">@twitter</a> / <a target="_blank" href="https://dribbble.com/harnishdesign">@Dribbble</a></p> -->
+
+          <div v-for="change in config.changelog">
+    	
+		      <hr class="divider">
+        	  
+              <h3 id="v1-1">{{ change.title }} <small v-if="change.date" class="text-muted">({{ change.date }})</small></h3>
+
+              <ul class="changelog">
+                <li v-for="item in change.changes"><span :class="`badge badge-${item.type || 'success'}`">{{ item.label }}</span> {{ item.title }}</li>
+              <!--   <li><span class="badge badge-danger">Fixed</span> Some minor bugs for browser compatibility</li>
+    			<li><span class="badge badge-danger">Fixed</span> Some minor bugs for responsive</li>
+                <li><span class="badge badge-info">Updated</span> FontAwesome to Latest Version</li>
+    			<li><span class="badge badge-info">Updated</span> Bootstrap to Latest Version</li>
+    			<li><span class="badge badge-info">Updated</span> Improvements in CSS and JS</li> -->
+              </ul>
+              
+          </div>
+
+        </section>        
+        
+      </div>
+    </div>
+	
+  </div>
+  <!-- Content end --> 
+  
+  <!-- Footer
+  ============================ -->
+  <footer v-if="false" id="footer" class="section bg-dark footer-text-light">
+    <div class="container">
+      <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
+        <li><a data-toggle="tooltip" href="https://twitter.com/harnishdesign/" target="_blank" title="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.facebook.com/harnishdesign/" target="_blank" title="" data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/" target="_blank" title="" data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.github.com/" target="_blank" title="" data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
+      </ul>
+      <p class="text-center">Copyright &copy; 2020 <a href="http://www.harnishdesign.net/idocs-one-page-documentation-html-template/">iDocs</a>. All Rights Reserved.</p>
+	  <p class="text-2 text-center mb-0">Design &amp; Develop by <a class="btn-link" target="_blank" href="http://www.harnishdesign.net/">HarnishDesign</a>.</p>
+    </div>
+  </footer>
+  <!-- Footer end -->
+  
+</div>
+<!-- Document Wrapper end --> 
+
+<!-- Back To Top --> 
+<a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a> 
+
+<!-- JavaScript
+============================ -->
+<script src="assets/vendor/jquery/jquery.min.js"></script> 
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+<!-- Highlight JS -->
+<script src="assets/vendor/highlight.js/highlight.min.js"></script> 
+<!-- Easing --> 
+<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script> 
+<!-- Magnific Popup --> 
+<script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script> 
+<!-- Custom Script -->
+<!-- <script src="assets/js/theme.js"></script> -->
+<script src="assets/js/vue-markdown.js"></script>
+
+<script>
+    window.load = function() {
+
+        // (function ($) {
+        //     "use strict";
+
+        // Preloader
+        // $(window).on('load', function () {
+           
+        // });
+
+        /*-------------------------------
+            Primary Menu
+        --------------------------------- */
+
+        // Dropdown show on hover
+        $('.primary-menu ul.navbar-nav li.dropdown, .login-signup ul.navbar-nav li.dropdown').on("mouseover", function() {
+            if ($(window).width() > 991) {
+                $(this).find('> .dropdown-menu').stop().slideDown('fast');
+                $(this).bind('mouseleave', function() {
+                $(this).find('> .dropdown-menu').stop().css('display', 'none'); 
+                });
+            }
+        });
+
+        // When dropdown going off to the out of the screen.
+        $('.primary-menu ul.navbar-nav .dropdown-menu').each(function() {
+                var menu = $('#header .container-fluid').offset();
+                var dropdown = $(this).parent().offset();
+
+                var i = (dropdown.left + $(this).outerWidth()) - (menu.left + $('#header .container-fluid').outerWidth());
+
+                if (i > 0) {
+                    $(this).css('margin-left', '-' + (i + 5) + 'px');
+                }
+            });
+        $(function () {
+            $(".dropdown li").on('mouseenter mouseleave', function (e) {
+                if ($(window).width() > 991) {
+                    var elm = $('.dropdown-menu', this);
+                    var off = elm.offset();
+                    var l = off.left;
+                    var w = elm.width();
+                    var docW = $(window).width();
+                    var isEntirelyVisible = (l + w + 30 <= docW);
+                    if (!isEntirelyVisible) {
+                        $(elm).addClass('dropdown-menu-right');
+                    } else {
+                        $(elm).removeClass('dropdown-menu-right');
+                    }
+                    }
+            });
+        });
+
+        // DropDown Arrow
+        $('.primary-menu ul.navbar-nav').find('a.dropdown-toggle').append($('<i />').addClass('arrow'));
+
+
+        // Mobile Collapse Nav
+        $('.primary-menu .navbar-nav .dropdown-toggle[href="#"], .primary-menu .dropdown-toggle[href!="#"] .arrow').on('click', function(e) {
+            if ($(window).width() < 991) {
+                e.preventDefault();
+                var $parentli = $(this).closest('li');
+                $parentli.siblings('li').find('.dropdown-menu:visible').slideUp();
+                $parentli.find('> .dropdown-menu').stop().slideToggle();
+                $parentli.siblings('li').find('a .arrow.show').toggleClass('show');
+                $parentli.find('> a .arrow').toggleClass('show');
+            }
+        });
+
+
+        // Mobile Menu
+        $('.navbar-toggler').on('click', function() {
+            $(this).toggleClass('show');
+        });
+
+
+        /*------------------------
+           Side Navigation
+        -------------------------- */
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebarCollapse span:nth-child(3)').toggleClass('w-50');
+            $('.idocs-navigation').toggleClass('active');
+        });
+
+
+        /*------------------------
+           Sections Scroll
+        -------------------------- */
+
+        $('.smooth-scroll,.idocs-navigation a').on('click', function() {
+            event.preventDefault();
+            var sectionTo = $(this).attr('href');
+            $('html, body').stop().animate({
+              scrollTop: $(sectionTo).offset().top - 120}, 1000, 'easeInOutExpo');
+        });
+
+        /*-----------------------------
+            Magnific Popup
+        ------------------------------- */
+
+        // Image on Modal
+        $('.popup-img').each(function() {
+            $(this).magnificPopup({
+                type: "image",
+                tLoading: '<div class="preloader"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>',
+                closeOnContentClick: !0,
+                mainClass: "mfp-fade",
+                
+            });
+        });
+
+        // YouTube/Viemo Video & Gmaps
+        // $('.popup-youtube, .popup-vimeo, .popup-gmaps').each(function() {
+        //     $(this).magnificPopup({
+        //             type: 'iframe',
+        //             mainClass: 'mfp-fade',
+        //     });
+        // });
+
+
+        /*------------------------
+           Highlight Js
+        -------------------------- */
+
+        // hljs.initHighlightingOnLoad();
+
+
+        /*------------------------
+           tooltips
+        -------------------------- */
+        $('[data-toggle=\'tooltip\']').tooltip({container: 'body'});
+
+
+        /*------------------------
+           Scroll to top
+        -------------------------- */
+        $(function () {
+            $(window).on('scroll', function(){
+                if ($(this).scrollTop() > 400) {
+                        $('#back-to-top').fadeIn();
+                    } else {
+                        $('#back-to-top').fadeOut();
+                    }
+                });
+            });
+
+        $('#back-to-top').on("click", function() {
+            $('html, body').animate({scrollTop:0}, 'slow');
+            return false;
+        });
+
+
+        // })(jQuery)
+
+    }
+    Vue.use(VueMarkdown);
+    var app = new Vue({
+        el: '#main-wrapper',
+        data: {
+            message: '<%- message %>',
+            active: false,
+            config: {}
+        },
+        mounted() {
+
+            this.load((data) => {
+
+                // console.log(data)
+        
+                window.load()
+
+                hljs.initHighlighting.called = false;
+                hljs.initHighlighting();
+
+                $('.lds-ellipsis').fadeOut(); // will first fade out the loading animation
+                $('.preloader').delay(333).fadeOut('slow'); // will fade out the white DIV that covers the website.
+                $('body').delay(333);
+
+                // this.active = 
+                this.section(data.sections[0])
+
+            })
+
+        },
+        methods: {
+            generateLinkMarkup($contentElement) {
+              const headings = [...$contentElement.querySelectorAll('h1, h2')]
+              const parsedHeadings = headings.map(heading => {
+                return {
+                  title: heading.innerText,
+                  depth: heading.nodeName.replace(/\D/g,''),
+                  id: heading.getAttribute('id')
+                }
+              })
+              return parsedHeadings
+              // console.log(parsedHeadings)
+            },
+            parseMarkdown(markdownText) {
+                var converter = new showdown.Converter()
+                return converter.makeHtml(markdownText);
+            },
+            checkFor() {
+      // if (!markdownText) return
+                // const htmlText = markdownText
+                //     // .replace(/\`\`\` (.*$)/gim, '<code>$1</code>')
+                //     .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+                //     .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+                //     .replace(, '<h1>$1</h1>')
+                //     .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
+                //     .replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
+                //     .replace(/\`\`\`(.*)\`\`\`/gim, '<code>$1</code>')
+                //     .replace(/\*(.*)\*/gim, '<i>$1</i>')
+                //     .replace(/!\[(.*?)\]\((.*?)\)/gim, "<img alt='$1' src='$2' />")
+                //     .replace(/\[(.*?)\]\((.*?)\)/gim, "<a href='$2'>$1</a>")
+                //     .replace(/\n$/gim, '<br />')
+
+                // return htmlText.trim()
+            },
+            title(text) {
+                return text.trim().replace(/[^\w\s-]/g, '')
+            },
+            slug(text) {
+                return text.toLowerCase().trim().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-').replace(/^-+|-+$/g, '')
+            },
+            section(i) {
+                var self = this
+                if (!i) return
+                i.slug = this.slug(i.title)
+                if (i.file) {
+                    axios.get(i.file).then((res) => {
+                        i.template = res.data
+                        this.active = i
+                        setTimeout(() => {
+                            hljs.initHighlighting.called = false;
+                            hljs.initHighlighting();
+                            var titles = i.template.match(/^## (.*$)/gim)
+                                titles = titles ? titles.map(a => {
+                                    return {
+                                        title: self.title(a),
+                                        href: self.slug(a)
+                                    }
+                                }) : titles
+                            self.active.titles = titles
+                            self.$forceUpdate()
+                            // console.log( titles )
+                        }, 100)
+                    })
+                    return
+                }
+                this.active = i
+                setTimeout(() => {
+                    hljs.initHighlighting.called = false;
+                    hljs.initHighlighting();
+                    var titles = i.template.match(/^## (.*$)/gim)
+                        titles = titles ? titles.map(a => {
+                            return {
+                                title: self.title(a),
+                                href: self.slug(a)
+                            }
+                        }) : titles
+                    self.active.titles = titles
+                    self.$forceUpdate()
+                    // console.log( titles )
+                }, 100)
+            },
+            load(cb) {
+                axios.get('/config.json').then((res) => {
+                    this.config = res.data
+                    if (cb) cb(res.data)
+                })
+            }
+        }
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+	"title": "Hello World",
+	"version": "1.0",
+	"author": "@nano2dev",
+	"tagline": "Enjoy Ice Cold Coke",
+	"created": "@nano2dev",
+	"updated": "@nano2dev",
+	"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+	"notice": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+	"sections": [
+		{
+			"title": "Getting Started",
+			"file": "/docs/getting-started.md"
+		}
+	],
+	"faq": [
+		{
+			"title": "What does royalty free mean?",
+			"body": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+		}
+	],
+	"changelog": [
+		{
+			"title": "Version 1",
+			"date": "12 Oct, 2020", 
+			"changes": [
+				{
+					"title": "Your information here for added new feature",
+					"type": "success",
+					"label": "ADDED"
+				}
+			]
+		}
+	]
+}
