@@ -34,10 +34,10 @@ To deploy, just remove this repo and add your own. A "hard" fork.
 ```
 rm -rf .git
 git init
-git commit -m "first commit"
+git commit -m "Look Ma! I'm on Github."
 git branch -M "master"
-git remote add origin git@github.com:USER/REPO.git
-git push -u origin master
+git remote add origin git@github.com:NAME/REPO.git
+git push -u origin "master"
 ```
 
 ## ❯ Set Up Pages
