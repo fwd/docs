@@ -14,7 +14,7 @@ git clone git@github.com:fwd/docs.git && cd docs
 
 ## ❯ Serve
 
-This package does not need building. Simply serve ```/index.html``` with any language. PHP does the trick.
+Simply serve ```/index.html``` with any language. PHP does the trick.
 
 ```bash
 php -S localhost:8080 ./
