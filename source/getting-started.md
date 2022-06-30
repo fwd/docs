@@ -22,10 +22,12 @@ php -S localhost:8080
 
 ## ❯ Edit
 
-- [docs.json](/docs.json) - Config your docs.
-- [source](/source) - Add pages to your docs in [Markdown](https://www.markdownguide.org/cheat-sheet/#basic-syntax).
+Open repo folder in your favorite editor.
 
-You don't have to touch any other file. Unless you want to.
+- [docs.json](/docs.json) - Edit Structure.
+- [source](/source) - Content Pages in [Markdown](https://www.markdownguide.org/cheat-sheet/#basic-syntax).
+
+No need to touch any other file. Unless you want to.
 
 ## ❯ Deploy
 
