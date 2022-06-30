@@ -14,7 +14,7 @@ git clone git@github.com:fwd/docs.git && cd docs
 
 ## ❯ Serve
 
-Simply serve ```/index.html``` with any language. PHP does the trick.
+```/index.html``` with any language. For ease, PHP does the trick.
 
 ```bash
 php -S localhost:8080 ./
