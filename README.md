@@ -44,7 +44,12 @@ git push -u origin master
 
 - [Setup Github Pages w/ Custom Domain](/settings/pages)
 - Source --> "Master" --> "/Root" --> **Save**
-- Visit: https://NAME.github.io/REPO
+
+## ❯ Done
+
+You now have free, reliable hosting for your docs. Nice.
+
+Visit: https://NAME.github.io/REPO
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
