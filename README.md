@@ -42,7 +42,7 @@ git push -u origin master
 
 ## ❯ Set Up Pages
 
-- [Setup Github Pages w/ Custom Domain](/settings/pages)
+- Visit [Repo Settings](/../settings/pages)
 - Source --> "Master" --> "/Root" --> **Save**
 
 ## ✅ Done
