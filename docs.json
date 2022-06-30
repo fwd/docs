@@ -10,8 +10,29 @@
 	"sections": [
 		{
 			"title": "Getting Started",
-			"file": "/docs/getting-started.md"
+			"file": "/source/getting-started.md"
 		}
+	],
+	"menu": [
+		
+		{
+			"title": "Dropdown",
+			"dropdown": [
+				
+				{
+					"title": "Item 1",
+					"dropdown": [
+						
+						{
+							"title": "Item 1"
+						}
+
+					]
+				}
+
+			]
+		}
+
 	],
 	"faq": [
 		{
@@ -20,6 +41,17 @@
 		}
 	],
 	"changelog": [
+		{
+			"title": "Version 1",
+			"date": "12 Oct, 2020", 
+			"changes": [
+				{
+					"title": "Your information here for added new feature",
+					"type": "success",
+					"label": "ADDED"
+				}
+			]
+		},
 		{
 			"title": "Version 1",
 			"date": "12 Oct, 2020", 

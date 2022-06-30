@@ -1,31 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
-<link href="assets/images/favicon.png" rel="icon" />
-<title>Documentation | Your ThemeForest item Name</title>
-<meta name="description" content="Your ThemeForest item Name and description">
-<meta name="author" content="harnishdesign.net">
-
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios@0.26.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/showdown@latest/dist/showdown.min.js"></script>
-
-
-<!-- Stylesheet
-============================== -->
-<!-- Bootstrap -->
-<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
-<!-- Font Awesome Icon -->
-<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
-<!-- Magnific Popup -->
-<link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css" />
-<!-- Highlight Syntax -->
-<link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
-<!-- Custom Stylesheet -->
-<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <link href="assets/images/favicon.png" rel="icon" />
+  <title></title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@0.26.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/showdown@latest/dist/showdown.min.js"></script>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css" />
+  <!-- Highlight Syntax -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
 </head>
 
 <body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
@@ -55,10 +48,11 @@
 		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
 		
 		<!-- Logo --> 
-        <a class="logo ml-md-3" href="index.html" title="iDocs Template"> <img src="assets/images/logo.png" alt="iDocs Template"/> </a> 
+    <a class="logo ml-md-3" href="index.html" title="Fwd Template"> 
+
+        <img src="assets/images/logo.png" alt="Fwd Template"/> </a> 
 		<span class="text-2 ml-2">v1.0</span> 
-        <!-- Logo End -->
-        
+
 		<!-- Navbar Toggler -->
 		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
         
@@ -83,11 +77,7 @@
             <li><a target="_blank" href="https://themeforest.net/user/harnishdesign/#contact?ref=HarnishDesign">Support</a></li>
           </ul>
         </div>
-      <!--   <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
-          <li class="social-icons-twitter"><a data-toggle="tooltip" href="http://www.twitter.com/harnishdesign/" target="_blank" title="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
-          <li class="social-icons-facebook"><a data-toggle="tooltip" href="http://www.facebook.com/harnishdesign/" target="_blank" title="" data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-          <li class="social-icons-dribbble"><a data-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/" target="_blank" title="" data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
-        </ul> -->
+        
       </div>
     </nav>
     <!-- Navbar End --> 
@@ -104,55 +94,14 @@
       <ul class="nav flex-column ">
 
         <li v-for="i of config.sections" class="nav-item">
-          <a class="nav-link active" @click="section(i)" href="#idocs_start">{{ i.title }}</a>
+          <a class="nav-link active" @click="section(i)" href="#content">{{ i.title }}</a>
           <ul v-if="active === i" class="nav flex-column">
             <li v-for="item of active.titles" class="nav-item"><a class="nav-link" :href="'#' + item.href">{{ item.title }}</a></li>
-            <!-- <li class="nav-item"><a class="nav-link" href="#idocs_html_structure">HTML Structure</a></li>
-            <li class="nav-item"><a class="nav-link" href="#idocs_sass">Sass</a></li>
-            <li class="nav-item"><a class="nav-link" href="#idocs_color_schemes">Color Schemes</a></li>
-            <li class="nav-item"><a class="nav-link" href="#idocs_theme_customization">Customization</a></li>
-            <li class="nav-item"><a class="nav-link" href="#idocs_logo_settings">Logo Settings</a></li> -->
           </ul>
         </li>
 
-      <!--   <li class="nav-item"><a class="nav-link" href="#idocs_layout">Layout</a>
-          <ul class="nav flex-column">
-			<li class="nav-item"><a class="nav-link" href="#idocs_header">Header</a></li>
-			<li class="nav-item"><a class="nav-link" href="#idocs_navbar">Navbar</a></li>
-			<li class="nav-item"><a class="nav-link" href="#idocs_sidebar">Sidebar</a></li>
-			<li class="nav-item"><a class="nav-link" href="#idocs_footer">Footer</a></li>
-			<li class="nav-item"><a class="nav-link" href="#idocs_box_layout">Box Layout</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item"><a class="nav-link" href="#idocs_content">Content</a>
-			<ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" href="#idocs_typography">Typography</a></li>
-            <li class="nav-item"><a class="nav-link" href="#idocs_code">Code</a></li>
-            <li class="nav-item"><a class="nav-link" href="#idocs_table">Table</a></li>
-			<li class="nav-item"><a class="nav-link" href="#idocs_icons">Icons</a></li>
-            <li class="nav-item"><a class="nav-link" href="#idocs_image">Image</a></li>
-			<li class="nav-item"><a class="nav-link" href="#idocs_video">Video</a></li>
-          </ul>
-		</li>
-
-        <li class="nav-item"><a class="nav-link" href="#idocs_components">Components</a>
-          <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" href="#idocs_accordion">Accordion</a></li>
-            <li class="nav-item"><a class="nav-link" href="#idocs_tabs">Tabs</a></li>
-            <li class="nav-item"><a class="nav-link" href="#idocs_social_icon">Social Icon</a></li>
-            <li class="nav-item"><a class="nav-link" href="#idocs_helper_classes">Helper Classes</a></li>
-          </ul>
-        </li> -->
-
-		<li class="nav-item"><a class="nav-link" href="#idocs_faq">FAQ</a></li>
-		<li class="nav-item"><a class="nav-link" href="#idocs_changelog">Changelog</a>
-        <li class="nav-item"><a class="nav-link" href="#idocs_source_credits">Credits</a></li>
-			<ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" href="#v1-1">v1.1</a></li>
-            <li class="nav-item"><a class="nav-link" href="#v1-0">v1.0</a></li>
-          </ul>
-		</li>
+        <li v-if="config.faq" class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        <li v-if="config.changelog" class="nav-item"><a class="nav-link" href="#changelog">Changelog</a>
 
       </ul>
     </div>
@@ -163,38 +112,15 @@
       <div class="container"> 
         
         <!-- Getting Started
-		============================ -->
-        <section id="idocs_start">
-        <h1>{{ active.title }}</h1>
-        <h2>{{ active.tagline }}</h2>
-        <p class="lead">{{ active.description }}</p>
-		<hr>
-		<div class="row">
-			<div class="col-sm-6 col-lg-4">
-				<ul class="list-unstyled">
-					<li><strong>Version:</strong> {{ active.version }}</li>
-					<li><strong>Author:</strong> <a href="http://www.harnishdesign.net" target="_blank">{{ active.author }}</a></li>
-				</ul>
-			</div>
-			<div class="col-sm-6 col-lg-4">
-				<ul class="list-unstyled">
-					<li><strong class="font-weight-700">Created:</strong> {{ active.created }}</li>
-					<li><strong>Updated:</strong> {{ active.updated }}</li>
-				</ul>
-			</div>
-		</div>
-        <p class="alert alert-info">{{ active.notice }}</p>
-        </section>
-        
-		<hr class="divider">
+    ============================ -->
 
-        <div v-html="parseMarkdown(active.template)"></div>
-		
-        <hr class="divider">
+    <div v-html="parseMarkdown(active.template)"></div>
+
+    <hr class="divider">
 
 		<!-- FAQ
 		============================ -->
-		<section v-if="config.faq" id="idocs_faq">
+		<section v-if="config.faq" id="faq">
           
           <h2>FAQ</h2>
 
@@ -222,13 +148,9 @@
         
 		<hr v-if="config.changelog" class="divider">
 
-        <section v-if="config.changelog" id="idocs_changelog">
+        <section v-if="config.changelog" id="changelog">
 
           <h2>Changelog</h2>
-
-          <!-- <p class="text-4">See what's new added, changed, fixed, improved or updated in the latest versions. </p> -->
-		  
-          <!-- <p class="alert alert-info mb-5"> For Future Updates Follow Us <a target="_blank" href="http://themeforest.net/user/harnishdesign?ref=HarnishDesign">@themeforest</a> / <a target="_blank" href="http://facebook.com/harnishdesign">@facebook</a> / <a target="_blank" href="http://twitter.com/harnishdesign">@twitter</a> / <a target="_blank" href="https://dribbble.com/harnishdesign">@Dribbble</a></p> -->
 
           <div v-for="change in config.changelog">
     	
@@ -238,11 +160,6 @@
 
               <ul class="changelog">
                 <li v-for="item in change.changes"><span :class="`badge badge-${item.type || 'success'}`">{{ item.label }}</span> {{ item.title }}</li>
-              <!--   <li><span class="badge badge-danger">Fixed</span> Some minor bugs for browser compatibility</li>
-    			<li><span class="badge badge-danger">Fixed</span> Some minor bugs for responsive</li>
-                <li><span class="badge badge-info">Updated</span> FontAwesome to Latest Version</li>
-    			<li><span class="badge badge-info">Updated</span> Bootstrap to Latest Version</li>
-    			<li><span class="badge badge-info">Updated</span> Improvements in CSS and JS</li> -->
               </ul>
               
           </div>
@@ -253,10 +170,7 @@
     </div>
 	
   </div>
-  <!-- Content end --> 
-  
-  <!-- Footer
-  ============================ -->
+
   <footer v-if="false" id="footer" class="section bg-dark footer-text-light">
     <div class="container">
       <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
@@ -265,11 +179,10 @@
         <li><a data-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/" target="_blank" title="" data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
         <li><a data-toggle="tooltip" href="http://www.github.com/" target="_blank" title="" data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
       </ul>
-      <p class="text-center">Copyright &copy; 2020 <a href="http://www.harnishdesign.net/idocs-one-page-documentation-html-template/">iDocs</a>. All Rights Reserved.</p>
+      <p class="text-center">Copyright &copy; 2020 <a href="http://www.harnishdesign.net/idocs-one-page-documentation-html-template/">Fwd</a>. All Rights Reserved.</p>
 	  <p class="text-2 text-center mb-0">Design &amp; Develop by <a class="btn-link" target="_blank" href="http://www.harnishdesign.net/">HarnishDesign</a>.</p>
     </div>
   </footer>
-  <!-- Footer end -->
   
 </div>
 <!-- Document Wrapper end --> 
@@ -460,8 +373,6 @@
 
             this.load((data) => {
 
-                // console.log(data)
-        
                 window.load()
 
                 hljs.initHighlighting.called = false;
@@ -471,7 +382,6 @@
                 $('.preloader').delay(333).fadeOut('slow'); // will fade out the white DIV that covers the website.
                 $('body').delay(333);
 
-                // this.active = 
                 this.section(data.sections[0])
 
             })
@@ -488,28 +398,10 @@
                 }
               })
               return parsedHeadings
-              // console.log(parsedHeadings)
             },
             parseMarkdown(markdownText) {
                 var converter = new showdown.Converter()
                 return converter.makeHtml(markdownText);
-            },
-            checkFor() {
-      // if (!markdownText) return
-                // const htmlText = markdownText
-                //     // .replace(/\`\`\` (.*$)/gim, '<code>$1</code>')
-                //     .replace(/^### (.*$)/gim, '<h3>$1</h3>')
-                //     .replace(/^## (.*$)/gim, '<h2>$1</h2>')
-                //     .replace(, '<h1>$1</h1>')
-                //     .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
-                //     .replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
-                //     .replace(/\`\`\`(.*)\`\`\`/gim, '<code>$1</code>')
-                //     .replace(/\*(.*)\*/gim, '<i>$1</i>')
-                //     .replace(/!\[(.*?)\]\((.*?)\)/gim, "<img alt='$1' src='$2' />")
-                //     .replace(/\[(.*?)\]\((.*?)\)/gim, "<a href='$2'>$1</a>")
-                //     .replace(/\n$/gim, '<br />')
-
-                // return htmlText.trim()
             },
             title(text) {
                 return text.trim().replace(/[^\w\s-]/g, '')
@@ -559,7 +451,7 @@
                 }, 100)
             },
             load(cb) {
-                axios.get('/config.json').then((res) => {
+                axios.get('/docs.json').then((res) => {
                     this.config = res.data
                     if (cb) cb(res.data)
                 })
