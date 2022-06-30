@@ -40,10 +40,17 @@ git remote add origin git@github.com:NAME/REPO.git
 git push -u origin "master"
 ```
 
-## ❯ Set Up Pages
+## ❯ Optional: Set Up Pages
 
 - Visit your Repo's [Settings](/../../settings/pages) Page
 - Source --> "Master" --> "/Root" --> **\[ Save \]**
+
+#### Use Custom Domain:
+
+- Visit your Repo's [Settings](/../../settings/pages) Page
+- "Custom domain" --> "Add Domain" --> **\[ Save \]**
+
+> If you want to keep Docs private. Make sure Repo is private. You will a server to host ```/index.html``` and the rest of the files.
 
 ## ✅ Done
 
