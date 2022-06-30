@@ -29,6 +29,8 @@ You don't have to touch any other file. Unless you want to.
 
 ## ❯ Deploy
 
+To deploy, just remove this repo and add your own. A "hard" fork. 
+
 ```
 rm -rf .git
 git init
