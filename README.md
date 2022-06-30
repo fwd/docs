@@ -43,7 +43,7 @@ git push -u origin master
 ## ❯ Set Up Pages
 
 - Visit your Repo's [Settings](/../../settings/pages) Page
-- Source --> "Master" --> "/Root" --> **Save**
+- Source --> "Master" --> "/Root" --> **\[ Save \]**
 
 ## ✅ Done
 
