@@ -196,7 +196,9 @@ h1 {
 }
 
 h2 {
-  font-size: 2.2rem;
+    font-size: 25px;
+    margin-top: -90px;
+    padding-top: 110px;
 }
 
 dl, ol, ul, pre, blockquote, .table {
@@ -730,6 +732,11 @@ hr {
   border-color: #0366d6;
 }
 
+.scroll-to-container {
+    padding-top: 150px;
+    margin-top: -110px;
+}
+
 /*=== 3.2 Docs Content ===*/
 .idocs-content {
   position: relative;
@@ -737,6 +744,7 @@ hr {
   padding: 0px 50px 50px;
   min-height: 750px;
   transition: all 0.3s;
+  /*margin-top: 40px;*/
 }
 .idocs-content section:first-child {
   padding-top: 3rem;

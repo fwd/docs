@@ -110,11 +110,10 @@
 	============================ -->
     <div class="idocs-content">
       <div class="container"> 
-        
-        <!-- Getting Started
-    ============================ -->
 
-    <div v-html="parseMarkdown(active.template)"></div>
+    <div :id="active.slug" class="scroll-to-container">
+        <div v-html="parseMarkdown(active.template)"></div>
+    </div>
 
     <hr class="divider">
 
@@ -413,8 +412,14 @@
                 var self = this
                 if (!i) return
                 i.slug = this.slug(i.title)
-                if (i.file) {
-                    axios.get(i.file).then((res) => {
+                var url = i.file || i.url
+                if (url && !url.toLowerCase().includes('.md')) {
+                    i.template = "Invalid Markdown URL."
+                    this.active = i
+                    return
+                }
+                if (url) {
+                    axios.get(url).then((res) => {
                         i.template = res.data
                         this.active = i
                         setTimeout(() => {
@@ -435,6 +440,7 @@
                     return
                 }
                 this.active = i
+                if (i.text || i.markdown) i.template = i.text || i.markdown
                 setTimeout(() => {
                     hljs.initHighlighting.called = false;
                     hljs.initHighlighting();

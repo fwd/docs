@@ -9,8 +9,16 @@
 	"notice": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
 	"sections": [
 		{
-			"title": "Getting Started",
+			"title": "Welcome",
+			"url": "https://raw.githubusercontent.com/fwd/docs/master/README.md"
+		},
+		{
+			"title": "Get Started",
 			"file": "/source/getting-started.md"
+		},
+		{
+			"title": "Something Else",
+			"text": "Hello World"
 		}
 	],
 	"menu": [
