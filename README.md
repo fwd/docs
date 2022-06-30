@@ -45,7 +45,7 @@ git push -u origin master
 - [Setup Github Pages w/ Custom Domain](/settings/pages)
 - Source --> "Master" --> "/Root" --> **Save**
 
-## ❯ Done
+## ✅ Done
 
 You now have free, reliable hosting for your docs. Nice.
 
