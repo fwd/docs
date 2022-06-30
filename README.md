@@ -50,7 +50,7 @@ git push -u origin "master"
 - Visit your Repo's [Settings](/../../settings/pages) Page
 - "Custom domain" --> "Add Domain" --> **\[ Save \]**
 
-> If you want to keep Docs private. Make sure Repo is private. You will a server to host ```/index.html``` and the rest of the files.
+> If you want to keep Docs private. That's fine. Make sure Repo is private. Bring your own server to host ```/index.html``` and the rest of the files. 
 
 ## ✅ Done
 
