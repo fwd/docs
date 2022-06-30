@@ -40,15 +40,11 @@ git remote add origin git@github.com:USER/REPO.git
 git push -u origin master
 ```
 
-## ❯ Pages
+## ❯ Set Up Pages
 
 - [Setup Github Pages w/ Custom Domain](/settings/pages)
 - Source --> "Master" --> "/Root" --> **Save**
 - Visit: https://NAME.github.io/REPO
-
-## ❯ Optional
-
-Have a beer 🍺
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
@@ -84,4 +80,4 @@ SOFTWARE.
 
 ## ❯ Stargazers
 
-[![Stargazers over time](https://starchart.cc/fwd/n2.svg)](https://github.com/fwd/n2)
+[![Stargazers over time](https://starchart.cc/fwd/docs.svg)](https://github.com/fwd/docs)
