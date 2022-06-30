@@ -40,21 +40,24 @@ git remote add origin git@github.com:NAME/REPO.git
 git push -u origin "master"
 ```
 
-## ❯ Optional: Set Up Pages
+## ❯ Free Public Hosting
 
+- Repo must be Public.
 - Visit your Repo's [Settings](/../../settings/pages) Page
 - Source --> "Master" --> "/Root" --> **\[ Save \]**
 
-#### Use Custom Domain:
+#### Optional: Use Custom Domain:
 
 - Visit your Repo's [Settings](/../../settings/pages) Page
 - "Custom domain" --> "Add Domain" --> **\[ Save \]**
+
+## ❯ Private Hosting
 
 > If you want to keep Docs private. That's fine. Make sure Repo is private. Bring your own server to host ```/index.html``` and the rest of the files. 
 
 ## ✅ Done
 
-You now have free, reliable hosting for your docs. Nice.
+You now have free, reliable hosting for your docs. 
 
 Visit: https://NAME.github.io/REPO
 
