@@ -12,9 +12,9 @@
 git clone git@github.com:fwd/docs.git && cd docs
 ```
 
-## ❯ Serve
+## ❯ Dev
 
-```/index.html``` with any language. For ease, PHP does the trick.
+Serve ```/index.html``` with any language. For ease, PHP does the trick.
 
 ```bash
 php -S localhost:8080
