@@ -1,0 +1,42 @@
+
+.dark-mode li,
+.dark-mode p,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6,
+.dark-mode .hljs-string,
+.dark-mode .hljs-built_in,
+.dark-mode .nav .nav-item .nav-link,
+.dark-mode .idocs-navigation .nav .nav .nav-link {
+    color: #ffffffdb;
+}
+
+.dark-mode .idocs-navigation .nav .nav .nav-item .nav-link:not(.active):after {
+  border-left: 1px solid rgb(255 255 255 / 36%);
+}
+
+.dark-mode code {
+    background-color: #666666;
+    border-radius: 4px;
+    color: #FFF !important;
+    line-height: 26px;
+}
+.dark-mode a, .dark-mode a:focus {
+    color: #0366d6;
+}
+.dark-mode .sticky-top {
+    filter: invert(1);
+}
+.idocs-content {
+    padding-bottom: 50px;
+}
+.dark-mode .idocs-content {
+    background: #0c0c0c;
+    padding-bottom: 50px;
+}
+.dark-mode .idocs-navigation {
+    background: #000000;
+}

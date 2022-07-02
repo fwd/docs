@@ -1,24 +1,25 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
-  <link href="assets/images/favicon.png" rel="icon" />
-  <title></title>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-  <script src="https://cdn.jsdelivr.net/npm/axios@0.26.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/showdown@latest/dist/showdown.min.js"></script>
-  <!-- Bootstrap -->
-  <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
-  <!-- Font Awesome Icon -->
-  <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
-  <!-- Magnific Popup -->
-  <link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css" />
-  <!-- Highlight Syntax -->
-  <link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
-  <!-- Custom Stylesheet -->
-  <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    <link href="assets/images/favicon.png" rel="icon" />
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.26.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/showdown@latest/dist/showdown.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css" />
+    <!-- Highlight Syntax -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/dark-mode.css" />
 </head>
 
 <body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
@@ -48,9 +49,10 @@
 		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
 		
 		<!-- Logo --> 
-    <a class="logo ml-md-3" href="index.html" title="Fwd Template"> 
-
-        <img src="assets/images/logo.png" alt="Fwd Template"/> </a> 
+        <a class="logo ml-md-3" href="index.html" title="Fwd Template"> 
+            Docs
+            <!-- <img src="assets/images/logo.png" alt="Fwd Template"/> -->
+        </a> 
 		<span class="text-2 ml-2">v1.0</span> 
 
 		<!-- Navbar Toggler -->
@@ -58,24 +60,14 @@
         
 		<div id="header-nav" class="collapse navbar-collapse justify-content-end">
           <ul class="navbar-nav">
-            <li class="dropdown"> <a class="dropdown-toggle" href="#">Dropdown</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Dropdown Action</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="index.html">Action</a></li>
-                    <li><a class="dropdown-item" href="feature-header-dark.html">Another Action</a></li>
-                    <li><a class="dropdown-item" href="feature-header-primary.html">Something Else Here</a></li>
-                    <li><a class="dropdown-item" href="index-2.html">Another Link</a></li>
-                  </ul>
-                </li>
-                <li><a class="dropdown-item" href="#">Another Action</a>
-                <li><a class="dropdown-item" href="#">Something Else Here</a></li>
-              </ul>
+            <li v-for="a in config.menu" class="dropdown">
+              <a class="dropdown-toggle" :href="a.href" target="_blank">{{ a.title }}</a>
             </li>
-            <li><a target="_blank" href="https://themeforest.net/user/harnishdesign/portfolio?ref=HarnishDesign">Other Template</a></li>
-            <li><a target="_blank" href="https://themeforest.net/user/harnishdesign/#contact?ref=HarnishDesign">Support</a></li>
           </ul>
+        </div>
+
+        <div class="dark-toggle">
+            <img @click="toggleDarkMode()" src="assets/images/dark-mode.svg" alt="">
         </div>
         
       </div>
@@ -90,7 +82,7 @@
     
 	<!-- Sidebar Navigation
 	============================ -->
-	<div class="idocs-navigation bg-light">
+	<div class="idocs-navigation">
       <ul class="nav flex-column ">
 
         <li v-for="i of config.sections" class="nav-item">
@@ -239,23 +231,8 @@
                     $(this).css('margin-left', '-' + (i + 5) + 'px');
                 }
             });
-        $(function () {
-            $(".dropdown li").on('mouseenter mouseleave', function (e) {
-                if ($(window).width() > 991) {
-                    var elm = $('.dropdown-menu', this);
-                    var off = elm.offset();
-                    var l = off.left;
-                    var w = elm.width();
-                    var docW = $(window).width();
-                    var isEntirelyVisible = (l + w + 30 <= docW);
-                    if (!isEntirelyVisible) {
-                        $(elm).addClass('dropdown-menu-right');
-                    } else {
-                        $(elm).removeClass('dropdown-menu-right');
-                    }
-                    }
-            });
-        });
+   
+
 
         // DropDown Arrow
         $('.primary-menu ul.navbar-nav').find('a.dropdown-toggle').append($('<i />').addClass('arrow'));
@@ -365,10 +342,17 @@
         el: '#main-wrapper',
         data: {
             message: '<%- message %>',
+            darkMode: false,
             active: false,
             config: {}
         },
         mounted() {
+
+            if (localStorage.getItem('darkMode') == 'true' || localStorage.getItem('darkMode') !== 'false' && (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                // this.darkMode = true
+                document.documentElement.className += 'dark-mode'
+                localStorage.setItem('darkMode', true)
+            }
 
             this.load((data) => {
 
@@ -387,6 +371,18 @@
 
         },
         methods: {
+            toggleDarkMode() {
+                if (this.darkMode) {
+                    this.darkMode = false
+                    // document.documentElement.className += 'dark-mode'
+                    localStorage.setItem('darkMode', false)
+                    window.location.reload()
+                } else {
+                    this.darkMode = true
+                    document.documentElement.className += ' dark-mode'
+                    localStorage.setItem('darkMode', true)
+                }
+            },
             generateLinkMarkup($contentElement) {
               const headings = [...$contentElement.querySelectorAll('h1, h2')]
               const parsedHeadings = headings.map(heading => {
@@ -457,7 +453,7 @@
                 }, 100)
             },
             load(cb) {
-                axios.get('/docs.json').then((res) => {
+                axios.get('/config.json').then((res) => {
                     this.config = res.data
                     if (cb) cb(res.data)
                 })

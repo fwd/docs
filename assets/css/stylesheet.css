@@ -768,7 +768,7 @@ hr {
 }
 /*=== 3.3 Section Divider ===*/
 .divider {
-  margin: 4rem 0;
+  margin: 2rem 0;
 }
 
 /* =================================== */
@@ -783,14 +783,24 @@ hr {
   min-height: 70px;
 }
 #header .logo {
-  -webkit-box-align: center;
+/*  -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-item-align: stretch;
-  align-self: stretch;
+  align-self: stretch;*/
+      font-size: 30px;
+    font-weight: bold;
+    color: #000;
+}
+
+.dark-toggle > img {
+      width: 45px;
+    margin-left: 5px;
+    border-left: 1px solid #00000024;
+    padding-left: 15px;
 }
 
 /*=== 4.1 Main Navigation ===*/

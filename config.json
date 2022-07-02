@@ -24,21 +24,8 @@
 	"menu": [
 		
 		{
-			"title": "Dropdown",
-			"dropdown": [
-				
-				{
-					"title": "Item 1",
-					"dropdown": [
-						
-						{
-							"title": "Item 1"
-						}
-
-					]
-				}
-
-			]
+			"title": "Github",
+			"href": "https://github.com"
 		}
 
 	],
