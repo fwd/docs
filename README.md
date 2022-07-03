@@ -22,8 +22,8 @@ php -S localhost:8080
 
 ## ❯ Edit
 
-- [config.json](/config.json) - Config basic settings.
-- [source](/source) - Add pages to your docs in [Markdown](https://www.markdownguide.org/cheat-sheet/#basic-syntax).
+- [config.json](/config.json) - Basic settings.
+- [source](/source) - Pages in [Markdown](https://www.markdownguide.org/cheat-sheet/#basic-syntax).
 
 You don't have to touch any other file. Unless you want to.
 
