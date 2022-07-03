@@ -1,4 +1,4 @@
-<p align="center">
+
   <img src="https://github.com/fwd/n2/raw/master/.github/banner.png" alt="Prompts" width="500" />
 </p>
 
@@ -22,7 +22,7 @@ php -S localhost:8080
 
 ## ❯ Edit
 
-- [docs.json](/docs.json) - Config your docs.
+- [config.json](/config.json) - Config basic settings.
 - [source](/source) - Add pages to your docs in [Markdown](https://www.markdownguide.org/cheat-sheet/#basic-syntax).
 
 You don't have to touch any other file. Unless you want to.
