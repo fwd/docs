@@ -453,7 +453,7 @@
                 }, 100)
             },
             load(cb) {
-                axios.get('/config.json').then((res) => {
+                axios.get('./config.json').then((res) => {
                     this.config = res.data
                     if (cb) cb(res.data)
                 })
