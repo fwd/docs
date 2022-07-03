@@ -9,15 +9,10 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@0.26.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/showdown@latest/dist/showdown.min.js"></script>
-    <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
-    <!-- Font Awesome Icon -->
     <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
-    <!-- Magnific Popup -->
     <link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css" />
-    <!-- Highlight Syntax -->
     <link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
-    <!-- Custom Stylesheet -->
     <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/dark-mode.css" />
 </head>
@@ -50,10 +45,10 @@
 		
 		<!-- Logo --> 
         <a class="logo ml-md-3" href="index.html" title="Fwd Template"> 
-            Docs
+            {{ config.logo }}
             <!-- <img src="assets/images/logo.png" alt="Fwd Template"/> -->
         </a> 
-		<span class="text-2 ml-2">v1.0</span> 
+		<span v-if="config.version" class="text-2 ml-2">{{ config.version }}</span> 
 
 		<!-- Navbar Toggler -->
 		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
@@ -198,18 +193,6 @@
 <script>
     window.load = function() {
 
-        // (function ($) {
-        //     "use strict";
-
-        // Preloader
-        // $(window).on('load', function () {
-           
-        // });
-
-        /*-------------------------------
-            Primary Menu
-        --------------------------------- */
-
         // Dropdown show on hover
         $('.primary-menu ul.navbar-nav li.dropdown, .login-signup ul.navbar-nav li.dropdown').on("mouseover", function() {
             if ($(window).width() > 991) {
@@ -292,21 +275,6 @@
                 
             });
         });
-
-        // YouTube/Viemo Video & Gmaps
-        // $('.popup-youtube, .popup-vimeo, .popup-gmaps').each(function() {
-        //     $(this).magnificPopup({
-        //             type: 'iframe',
-        //             mainClass: 'mfp-fade',
-        //     });
-        // });
-
-
-        /*------------------------
-           Highlight Js
-        -------------------------- */
-
-        // hljs.initHighlightingOnLoad();
 
 
         /*------------------------

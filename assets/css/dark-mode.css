@@ -18,12 +18,26 @@
   border-left: 1px solid rgb(255 255 255 / 36%);
 }
 
+.dark-mode .accordion .card-body {
+  color: #FFF;
+}
+
 .dark-mode code {
-    background-color: #666666;
+    background-color: #000;
     border-radius: 4px;
     color: #FFF !important;
     line-height: 26px;
 }
+
+.dark-mode .accordion:not(.accordion-alternate) .card-header a.collapsed {
+      background-color: #000000;
+    color: #ffffff;
+}
+
+.dark-mode blockquote {
+  border-left: 5px solid #2a2a2a;
+}
+
 .dark-mode a, .dark-mode a:focus {
     color: #0366d6;
 }

@@ -1,12 +1,8 @@
 {
-	"title": "Hello World",
-	"version": "1.0",
+	"title": "Nano.to Docs",
+	"logo": "Nano.to",
+	"version": "v1.0",
 	"author": "@nano2dev",
-	"tagline": "Enjoy Ice Cold Coke",
-	"created": "@nano2dev",
-	"updated": "@nano2dev",
-	"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-	"notice": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
 	"sections": [
 		{
 			"title": "Welcome",

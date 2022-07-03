@@ -175,6 +175,10 @@ p {
   line-height: 1.8;
 }
 
+p, li {
+  font-size: 16px;
+}
+
 blockquote {
   border-left: 5px solid #eee;
   padding: 10px 20px;
@@ -654,7 +658,7 @@ hr {
   transition: all 0.3s;
 }
 .idocs-navigation > .nav {
-  padding: 30px 0;
+  padding: 15px 0;
 }
 .idocs-navigation .nav .nav-item {
   position: relative;
@@ -1760,6 +1764,7 @@ hr {
   margin-right: 10px;
   border-radius: .20rem;
   text-transform: uppercase;
+  padding: 7px 0;
 }
 .changelog li {
   line-height: 1.8;
