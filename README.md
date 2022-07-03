@@ -1,4 +1,4 @@
-
+<h2 align="center">
   <img src="https://github.com/fwd/n2/raw/master/.github/banner.png" alt="Prompts" width="500" />
 </p>
 
