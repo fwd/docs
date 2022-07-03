@@ -1,8 +1,6 @@
 {
-	"title": "Nano.to Docs",
-	"logo": "Nano.to",
+	"logo": "Docs",
 	"version": "v1.0",
-	"author": "@nano2dev",
 	"sections": [
 		{
 			"title": "Welcome",
