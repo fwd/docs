@@ -34,7 +34,7 @@ To deploy, just remove this repo and add your own.
 ```
 rm -rf .git
 git init
-git commit -m "Look Ma! I'm on Github."
+git add . && git commit -m "Look Ma! I'm on Github."
 git branch -M "master"
 git remote add origin git@github.com:NAME/REPO.git
 git push -u origin "master"
