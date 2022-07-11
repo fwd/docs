@@ -9,10 +9,6 @@
 		{
 			"title": "Get Started",
 			"file": "/source/getting-started.md"
-		},
-		{
-			"title": "Something Else",
-			"text": "Hello World"
 		}
 	],
 	"menu": [

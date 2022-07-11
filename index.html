@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
-    <link href="assets/images/favicon.png" rel="icon" />
-    <title></title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+    <title>Nano.to Documentation</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@0.26.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/showdown@latest/dist/showdown.min.js"></script>
@@ -44,10 +44,10 @@
 		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
 		
 		<!-- Logo --> 
-        <a class="logo ml-md-3" href="index.html" title="Fwd Template"> 
+        <a class="logo" title=""> 
             {{ config.logo }}
-            <!-- <img src="assets/images/logo.png" alt="Fwd Template"/> -->
         </a> 
+
 		<span v-if="config.version" class="text-2 ml-2">{{ config.version }}</span> 
 
 		<!-- Navbar Toggler -->
@@ -61,8 +61,8 @@
           </ul>
         </div>
 
-        <div class="dark-toggle">
-            <img @click="toggleDarkMode()" src="assets/images/dark-mode.svg" alt="">
+        <div @click="toggleDarkMode()" class="dark-toggle">
+            <img src="assets/images/dark-mode.svg" alt="">
         </div>
         
       </div>
@@ -87,8 +87,8 @@
           </ul>
         </li>
 
-        <li v-if="config.faq" class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-        <li v-if="config.changelog" class="nav-item"><a class="nav-link" href="#changelog">Changelog</a>
+        <!-- <li v-if="config.changelog" class="nav-item"><a class="nav-link" href="#changelog">Changelog</a> -->
+        <!-- <li v-if="config.faq" class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li> -->
 
       </ul>
     </div>
@@ -102,11 +102,11 @@
         <div v-html="parseMarkdown(active.template)"></div>
     </div>
 
-    <hr class="divider">
+    <!-- <hr class="divider"> -->
 
 		<!-- FAQ
 		============================ -->
-		<section v-if="config.faq" id="faq">
+		<section v-if="false && config.faq" id="faq">
           
           <h2>FAQ</h2>
 
@@ -132,9 +132,9 @@
           
         </section>
         
-		<hr v-if="config.changelog" class="divider">
+		<hr v-if="false && config.changelog" class="divider">
 
-        <section v-if="config.changelog" id="changelog">
+        <section v-if="false && config.changelog" id="changelog">
 
           <h2>Changelog</h2>
 
@@ -142,7 +142,7 @@
     	
 		      <hr class="divider">
         	  
-              <h3 id="v1-1">{{ change.title }} <small v-if="change.date" class="text-muted">({{ change.date }})</small></h3>
+              <h2 id="v1-1">{{ change.title }} <small v-if="change.date" class="text-muted">({{ change.date }})</small></h2>
 
               <ul class="changelog">
                 <li v-for="item in change.changes"><span :class="`badge badge-${item.type || 'success'}`">{{ item.label }}</span> {{ item.title }}</li>
@@ -316,6 +316,8 @@
         },
         mounted() {
 
+            var self = this
+
             if (localStorage.getItem('darkMode') == 'true' || localStorage.getItem('darkMode') !== 'false' && (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                 // this.darkMode = true
                 document.documentElement.className += 'dark-mode'
@@ -334,11 +336,38 @@
                 $('body').delay(333);
 
                 this.section(data.sections[0])
+                
+                var hash = window.location.pathname !== '/' ? window.location.pathname : window.location.hash
+
+                if (hash && self.config.redirect) {
+                    for (var i of this.config.redirect) {
+                        if (i.path === hash.replace('#', '').replace('/', '')) {
+                            this.section(data.sections.find(a => a.file === i.file))
+                        }
+                    }
+                }
+
+                if (hash && !self.config.redirect) {
+                    setTimeout(() => {
+
+                        // if (window.location.pathname !== '/') {
+                        //     window.history.pushState(window.location.pathname, "", '/')
+                        // }
+                        
+                        self.redirect(hash)
+
+                    }, 500)
+                }
+
 
             })
 
         },
         methods: {
+            redirect(hash) {
+                window.location.hash = '#' + hash.replace('#', '').replace('/', '')
+                return 
+            },
             toggleDarkMode() {
                 if (this.darkMode) {
                     this.darkMode = false
@@ -367,23 +396,20 @@
                 return converter.makeHtml(markdownText);
             },
             title(text) {
-                return text.trim().replace(/[^\w\s-]/g, '')
+                return text.trim().replace(/[^\.\w\s-]/g, '')
+                // return text.trim().replace(/[^\w\s-]/g, '')
             },
             slug(text) {
-                return text.toLowerCase().trim().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-').replace(/^-+|-+$/g, '')
+                return text.toLowerCase().trim().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '').replace(/^-+|-+$/g, '')
             },
             section(i) {
                 var self = this
                 if (!i) return
                 i.slug = this.slug(i.title)
                 var url = i.file || i.url
-                if (url && !url.toLowerCase().includes('.md')) {
-                    i.template = "Invalid Markdown URL."
-                    this.active = i
-                    return
-                }
+                // window.history.pushState(window.location.pathname, "", '/' + i.slug.replace('api', ''))
                 if (url) {
-                    axios.get(url).then((res) => {
+                    axios.get(url.replace('.md', '') + '.md').then((res) => {
                         i.template = res.data
                         this.active = i
                         setTimeout(() => {

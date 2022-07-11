@@ -1,7 +1,3 @@
-<h2 align="center">
-  <img src="https://github.com/fwd/n2/raw/master/.github/banner.png" alt="Prompts" width="500" />
-</p>
-
 <h2 align="center">Free Hosted Docs (w/ Github Pages)</h2>
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
