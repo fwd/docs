@@ -53,8 +53,8 @@ Website: https://NAME.github.io/REPO
 - Visit your Repo's [Settings](/../../settings/pages) Page
 - "Custom domain" --> "Add Domain" --> **\[ Save \]**
 
-#### DNS Settings
-- Add **A** record to your domain to: 185.199.108.153
+#### Domain DNS Settings
+- Create **A** record that points to: 185.199.108.153
 - If using Cloudflare, make sure to disable proxy.
 
 Official Docs: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
