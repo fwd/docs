@@ -786,7 +786,7 @@ hr {
   pointer-events: all;
 }
 
-.dark-toggle > img {
+.dark-toggle > div {
   width: 45px;
   margin-left: 5px;
   border-left: 1px solid #00000024;

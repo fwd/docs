@@ -1,4 +1,5 @@
 {
+	"title": "Nano.to Documentation",
 	"logo": "Docs",
 	"version": "v1.0",
 	"sections": [
@@ -8,7 +9,7 @@
 		},
 		{
 			"title": "Get Started",
-			"file": "/source/getting-started.md"
+			"file": "/pages/getting-started.md"
 		}
 	],
 	"menu": [

@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
-    <title>Nano.to Documentation</title>
+    <title></title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@0.26.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/showdown@latest/dist/showdown.min.js"></script>
@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/dark-mode.css" />
+    <link rel="stylesheet" type="text/css" href="custom.css" />
 </head>
 
 <body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
@@ -62,7 +63,9 @@
         </div>
 
         <div @click="toggleDarkMode()" class="dark-toggle">
-            <img src="assets/images/dark-mode.svg" alt="">
+            <div>
+                <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8V16Z" fill="currentColor"/><path clip-rule="evenodd" d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM12 4V8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16V20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z" fill="currentColor" fill-rule="evenodd"/></svg>
+            </div>
         </div>
         
       </div>
@@ -325,6 +328,8 @@
             }
 
             this.load((data) => {
+
+                document.title = data.title
 
                 window.load()
 

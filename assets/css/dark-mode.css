@@ -35,7 +35,7 @@
 }
 
 .dark-mode .dark-toggle {
-    filter: invert(1);
+    filter: invert(0);
 }
 
 .dark-mode #header .navbar {

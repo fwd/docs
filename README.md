@@ -24,8 +24,15 @@ or run:
 npm start
 ```
 
-- [config.json](/config.json) - Basic settings.
-- [source](/source) - Pages in [Markdown](https://www.markdownguide.org/cheat-sheet/#basic-syntax).
+### File Structure
+
+This package requires **no** compiling or installing. There are some optional scripts in ```package.json```
+
+- [config.json](/config.json) - Configure Documentation.
+- [/pages](/pages) - Pages in [Markdown](https://www.markdownguide.org/cheat-sheet/#basic-syntax).
+- [custom.css](/custom.css) - Optional Custom CSS.
+- [favicon.png](/favicon.png) - Customize Favicon.
+- [/images](/images) - Store Documentation Assets
 
 ## ❯ Deploy
 
@@ -58,6 +65,10 @@ Website: https://NAME.github.io/REPO
 - If using Cloudflare, make sure to disable proxy.
 
 Official Docs: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
+
+#### 404 Redirect
+- Github Pages allows Redirect by creating a 404.html file.
+- Run ```npm build``` to do this automatically
 
 ## ❯ Private Hosting
 
