@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "update": "git clone git@github.com:fwd/docs.git _docs && mv _docs/assets/ assets && mv _docs/index.html index.html && rm -rf ./_docs",
+    "update": "rm -rf ./assets && mkdir ./assets && rm -rf .update && git clone git@github.com:fwd/docs.git .update && mv .update/assets/* ./assets && mv .update/index.html ./index.html && rm -rf ./.update",
     "start": "php -S localhost:8080",
     "build": "cp index.html 404.html"
   }
