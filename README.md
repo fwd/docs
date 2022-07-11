@@ -61,7 +61,7 @@ Official Docs: https://docs.github.com/en/pages/configuring-a-custom-domain-for-
 
 ## ❯ Private Hosting
 
-> If you want to keep Docs private. That's fine. Make sure Repo is private. Bring your own server to host ```/index.html``` and the rest of the files in this repo. 
+> If you want to keep Docs private. Serve ```/index.html``` and the rest of the files on your own server. 
 
 ## ✅ Done
 
