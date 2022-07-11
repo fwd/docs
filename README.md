@@ -26,7 +26,7 @@ npm start
 
 ### File Structure
 
-This package requires **no** compiling or installing. There are some optional scripts in ```package.json```
+This package requires **no** compiling or installing. 
 
 - [config.json](/config.json) - Configure Documentation.
 - [/pages](/pages) - Pages in [Markdown](https://www.markdownguide.org/cheat-sheet/#basic-syntax).
