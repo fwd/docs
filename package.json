@@ -1,23 +1,6 @@
 {
-  "name": "docs",
-  "version": "1.0.0",
-  "description": "<h2 align=\"center\">   <img src=\"https://github.com/fwd/n2/raw/master/.github/banner.png\" alt=\"Prompts\" width=\"500\" /> </p>",
-  "main": "index.js",
   "scripts": {
     "start": "php -S localhost:8080",
     "build": "cp index.html 404.html"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fwd/docs.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/fwd/docs/issues"
-  },
-  "homepage": "https://github.com/fwd/docs#readme",
-  "dependencies": {
-    "@fwd/server": "github:fwd/server"
   }
 }
