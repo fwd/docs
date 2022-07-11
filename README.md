@@ -82,14 +82,15 @@ Visit: https://NAME.github.io/REPO
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-## ❯ Update
+## Updating
 
-- You can pull the latest version of "Fwd/Docs" at any time by running:
+You can pull the latest version of "Fwd/Docs" at any time by running:
+
 ```
 npm run update
 ```
 
-> Warning: This will override ```/assets``` and ```index.html```. Other files and folders are not affected.
+> Warning: This will override ```/assets``` and ```index.html```. Be careful.
 
 ## ❯ Contributing
 
