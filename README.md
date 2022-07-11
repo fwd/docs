@@ -90,7 +90,7 @@ You can pull the latest version of "Fwd/Docs" at any time by running:
 npm run update
 ```
 
-> Warning: This will override ```/assets``` and ```index.html```. Be careful.
+> Warning: This will override ```/assets``` and ```index.html```. 
 
 ## ❯ Contributing
 
