@@ -40,7 +40,7 @@ git remote add origin git@github.com:NAME/REPO.git
 git push -u origin "master"
 ```
 
-## ❯ Free Public Hosting
+## ❯ Free Website Hosting
 
 - Repo must be Public.
 - Visit your Repo's [Settings](/../../settings/pages) Page
@@ -48,7 +48,7 @@ git push -u origin "master"
 
 Website: https://NAME.github.io/REPO
 
-#### Optional: Use Custom Domain:
+#### Optional: Custom Domain:
 
 - Visit your Repo's [Settings](/../../settings/pages) Page
 - "Custom domain" --> "Add Domain" --> **\[ Save \]**
