@@ -10,7 +10,7 @@
 git clone git@github.com:fwd/docs.git && cd docs
 ```
 
-## ❯ Dev
+## ❯ Create
 
 Serve ```/index.html``` with any language. For ease, PHP does the trick.
 
@@ -18,16 +18,18 @@ Serve ```/index.html``` with any language. For ease, PHP does the trick.
 php -S localhost:8080
 ```
 
-## ❯ Edit
+or run:
+
+```
+npm start
+```
 
 - [config.json](/config.json) - Basic settings.
 - [source](/source) - Pages in [Markdown](https://www.markdownguide.org/cheat-sheet/#basic-syntax).
 
-You don't have to touch any other file. Unless you want to.
-
 ## ❯ Deploy
 
-To deploy, just remove this repo and add your own. 
+Simply remove the .git folder, and add your own. 
 
 ```
 rm -rf .git
@@ -44,6 +46,8 @@ git push -u origin "master"
 - Visit your Repo's [Settings](/../../settings/pages) Page
 - Source --> "Master" --> "/Root" --> **\[ Save \]**
 
+Website: https://NAME.github.io/REPO
+
 #### Optional: Use Custom Domain:
 
 - Visit your Repo's [Settings](/../../settings/pages) Page
@@ -51,11 +55,11 @@ git push -u origin "master"
 
 ## ❯ Private Hosting
 
-> If you want to keep Docs private. That's fine. Make sure Repo is private. Bring your own server to host ```/index.html``` and the rest of the files. 
+> If you want to keep Docs private. That's fine. Make sure Repo is private. Bring your own server to host ```/index.html``` and the rest of the files in this repo. 
 
 ## ✅ Done
 
-You now have free, reliable hosting for your docs. 
+You now have free, reliable hosting for your docs. Nice.
 
 Visit: https://NAME.github.io/REPO
 
