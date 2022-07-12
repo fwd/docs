@@ -24,6 +24,16 @@ Add the cloned folder to your favorite editor and, serve ```/index.html``` with 
 
 **PHP**: ```php -S localhost:8080```
 
+- [/pages](/pages) - Pages in [Markdown](https://www.markdownguide.org/cheat-sheet/#basic-syntax).
+- [config.json](/config.json) - Configure Documentation.
+- [favicon.png](/favicon.png) - Customize Favicon.
+- [/images](/images) - Store Documentation Assets.
+
+**Optional:**
+- [custom.css](/custom.css) - Optional Custom CSS.
+- [/assets](/assets) - Docs CSS & JS Files.
+- [index.html](/index.html) - Most things are configured via JSON file.
+
 ## ❯ 3. Deploy
 
 Remove the .git folder, and add your own. 
@@ -69,16 +79,6 @@ Visit: https://NAME.github.io/REPO
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
 ## ❯ Further Reading
-
-#### File Structure
-
-This package requires **no** compiling or installing. It's just a fancy ```/index.html``` file. 
-
-- [config.json](/config.json) - Configure Documentation.
-- [/pages](/pages) - Pages in [Markdown](https://www.markdownguide.org/cheat-sheet/#basic-syntax).
-- [custom.css](/custom.css) - Optional Custom CSS.
-- [favicon.png](/favicon.png) - Customize Favicon.
-- [/images](/images) - Store Documentation Assets
 
 #### Redirects
 - Github Pages allows Redirect by creating a 404.html file.
