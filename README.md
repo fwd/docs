@@ -1,44 +1,28 @@
+<h2 align="center" style="font-size: 30px">Fwd Docs (JSON + Markdown)</h2>
+
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
+
 ![line](https://github.com/fwd/docs/raw/master/images/banner.png)
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-<h2 align="center" style="font-size: 30px">Free Hosted Docs (w/ Github Pages)</h2>
-
-![line](https://github.com/fwd/n2/raw/master/.github/line.png)
-
-## ❯ Install
+## ❯ Clone
 
 ```bash
 git clone git@github.com:fwd/docs.git && cd docs
 ```
 
-## ❯ Create
+## ❯ Edit
 
-Serve ```/index.html``` with any language. For ease, PHP does the trick.
+Serve ```/index.html``` with any language. 
 
-```bash
-php -S localhost:8080
-```
+**NPM**: ```npm start```
 
-or run:
-
-```
-npm start
-```
-
-### File Structure
-
-This package requires **no** compiling or installing. 
-
-- [config.json](/config.json) - Configure Documentation.
-- [/pages](/pages) - Pages in [Markdown](https://www.markdownguide.org/cheat-sheet/#basic-syntax).
-- [custom.css](/custom.css) - Optional Custom CSS.
-- [favicon.png](/favicon.png) - Customize Favicon.
-- [/images](/images) - Store Documentation Assets
+**PHP**: ```php -S localhost:8080```
 
 ## ❯ Deploy
 
-Simply remove the .git folder, and add your own. 
+Remove the .git folder, and add your own. 
 
 ```
 rm -rf .git
@@ -49,7 +33,17 @@ git remote add origin git@github.com:NAME/REPO.git
 git push -u origin "master"
 ```
 
-## ❯ Free Website Hosting
+### File Structure
+
+This package requires **no** compiling or installing. It's just a fancy ```/index.html``` file. 
+
+- [config.json](/config.json) - Configure Documentation.
+- [/pages](/pages) - Pages in [Markdown](https://www.markdownguide.org/cheat-sheet/#basic-syntax).
+- [custom.css](/custom.css) - Optional Custom CSS.
+- [favicon.png](/favicon.png) - Customize Favicon.
+- [/images](/images) - Store Documentation Assets
+
+### ❯ Free Website Hosting
 
 - Repo must be Public.
 - Visit your Repo's [Settings](/../../settings/pages) Page
