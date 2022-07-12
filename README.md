@@ -18,7 +18,7 @@ git clone git@github.com:fwd/docs.git && cd docs
 
 ## ❯ 2. Edit
 
-Add the cloned folder to your favorite editor and, serve ```/index.html``` with any language. 
+Open ```docs``` folder with your favorite editor, and serve ```/index.html``` with a server. 
 
 **NPM**: ```npm start```
 
