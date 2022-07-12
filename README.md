@@ -8,7 +8,7 @@
 
 ## ❯ Live Demo
 
-https://docs.nano.to
+Nano.to Docs: <a href="https://docs.nano.to" target="_blank">https://docs.nano.to</a>
 
 ## ❯ 1. Install
 
