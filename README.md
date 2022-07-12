@@ -8,7 +8,7 @@
 
 ## ❯ Features
 
-- Markdown Editing
+- Write in Markdown
 - Changelog Section
 - FAQ Section
 - Dark Mode
