@@ -39,12 +39,12 @@ Open ```docs``` in your favorite editor, and serve ```/index.html``` with a serv
 - [/pages](/pages) - Pages in [Markdown](https://www.markdownguide.org/cheat-sheet/#basic-syntax).
 - [config.json](/config.json) - Configure Documentation.
 - [favicon.png](/favicon.png) - Customize Favicon.
-- [/images](/images) - Store Documentation Assets.
+- [/images](/images) - Images for your docs.
 
 **Optional:**
-- [custom.css](/custom.css) - Optional Custom CSS.
-- [/assets](/assets) - Docs CSS & JS Files.
+- [custom.css](/custom.css) - Optional, Custom CSS.
 - [index.html](/index.html) - Most things are configured via JSON file.
+- [/assets](/assets) - Docs CSS & JS Files. If you don't touch this, you can update anytime.
 
 ## ❯ 3. Deploy
 
