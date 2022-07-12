@@ -1,7 +1,6 @@
-<h2 align="center" style="font-size: 30px">Easy Docs (JSON + Markdown)</h2>
-<h2 align="center" style="font-size: 30px">by <a href="https://twitter.com/nano2dev">@nano2dev</a></h2>
-
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
+
+<h2 align="center" style="font-size: 30px">Easy Docs (JSON + Markdown)</h2>
 
 ![line](https://github.com/fwd/docs/raw/master/images/banner.png)
 
