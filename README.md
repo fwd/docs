@@ -6,13 +6,17 @@
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-## ❯ Clone
+## ❯ Live Demo
+
+https://docs.nano.to
+
+## ❯ 1. Install
 
 ```bash
 git clone git@github.com:fwd/docs.git && cd docs
 ```
 
-## ❯ Edit
+## ❯ 2. Edit
 
 Serve ```/index.html``` with any language. 
 
@@ -20,7 +24,7 @@ Serve ```/index.html``` with any language.
 
 **PHP**: ```php -S localhost:8080```
 
-## ❯ Deploy
+## ❯ 3. Deploy
 
 Remove the .git folder, and add your own. 
 
@@ -33,17 +37,7 @@ git remote add origin git@github.com:NAME/REPO.git
 git push -u origin "master"
 ```
 
-### File Structure
-
-This package requires **no** compiling or installing. It's just a fancy ```/index.html``` file. 
-
-- [config.json](/config.json) - Configure Documentation.
-- [/pages](/pages) - Pages in [Markdown](https://www.markdownguide.org/cheat-sheet/#basic-syntax).
-- [custom.css](/custom.css) - Optional Custom CSS.
-- [favicon.png](/favicon.png) - Customize Favicon.
-- [/images](/images) - Store Documentation Assets
-
-### ❯ Free Website Hosting
+## ❯ 4. Free Website Hosting
 
 - Repo must be Public.
 - Visit your Repo's [Settings](/../../settings/pages) Page
@@ -62,15 +56,11 @@ Website: https://NAME.github.io/REPO
 
 Official Docs: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
 
-#### 404 Redirect
-- Github Pages allows Redirect by creating a 404.html file.
-- Run ```npm build``` to do this automatically
-
-## ❯ Private Hosting
+#### ❯ Private Hosting
 
 > If you want to keep Docs private. Serve ```/index.html``` and the rest of the files on your own server. Bring your own Auth.
 
-## ✅ Done
+## ❯ ✅ Done
 
 You now have free, reliable hosting for your docs. Nice.
 
@@ -78,15 +68,31 @@ Visit: https://NAME.github.io/REPO
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-## Updating
+## ❯ Further Reading
 
-You can pull the latest version of "Fwd/Docs" at any time by running:
+#### File Structure
+
+This package requires **no** compiling or installing. It's just a fancy ```/index.html``` file. 
+
+- [config.json](/config.json) - Configure Documentation.
+- [/pages](/pages) - Pages in [Markdown](https://www.markdownguide.org/cheat-sheet/#basic-syntax).
+- [custom.css](/custom.css) - Optional Custom CSS.
+- [favicon.png](/favicon.png) - Customize Favicon.
+- [/images](/images) - Store Documentation Assets
+
+#### Redirects
+- Github Pages allows Redirect by creating a 404.html file.
+- Run ```npm build``` to do this automatically
+
+#### Updating Docs ()
+
+You can pull the latest version of "Easy Docs" at any time by running:
 
 ```
 npm run update
 ```
 
-> Warning: This will override ```/assets``` and ```index.html```. 
+> Warning: This will override ```/assets``` and ```index.html```. You can always update manually by cloning this repo again and replacing the files you need.
 
 ## ❯ Contributing
 
