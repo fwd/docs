@@ -8,11 +8,13 @@
 
 ## ❯ Features
 
-- Mobile Friendly
+- Markdown Editing
 - Changelog Section
 - FAQ Section
 - Dark Mode
 - Updatable
+- Mobile Friendly
+- Source Control Friendly
 - No Installing or Compiling
 - Free Hosting (w/ Github Pages)
 
