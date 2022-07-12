@@ -6,6 +6,15 @@
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
+## ❯ Features
+
+- Free Hosting (w/ Github Pages)
+- Mobile Friendly
+- Changelog Section
+- FAQ Section
+- Dark Mode
+- Updatable
+
 ## ❯ Live Demo
 
 Nano.to Docs: <a href="https://docs.nano.to" target="_blank">https://docs.nano.to</a>
@@ -86,7 +95,7 @@ Visit: https://NAME.github.io/REPO
 - Github Pages allows Redirect by creating a 404.html file.
 - Run ```npm build``` to do this automatically
 
-#### Updating Docs ()
+#### Updating Docs
 
 You can pull the latest version of "Easy Docs" at any time by running:
 
