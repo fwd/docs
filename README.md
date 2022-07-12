@@ -1,3 +1,5 @@
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
+
 <h2 align="center" style="font-size: 30px">Easy Docs (JSON + Markdown)</h2>
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
