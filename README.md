@@ -16,13 +16,15 @@ Nano.to Docs: <a href="https://docs.nano.to" target="_blank">https://docs.nano.t
 git clone git@github.com:fwd/docs.git && cd docs
 ```
 
-## ❯ 2. Edit
+## ❯ 2. Create
 
-Open ```docs``` folder with your favorite editor, and serve ```/index.html``` with a server. 
+Open ```docs``` in your favorite editor, and serve ```/index.html``` with a server. 
 
 **NPM**: ```npm start```
 
 **PHP**: ```php -S localhost:8080```
+
+**Edit:**
 
 - [/pages](/pages) - Pages in [Markdown](https://www.markdownguide.org/cheat-sheet/#basic-syntax).
 - [config.json](/config.json) - Configure Documentation.
