@@ -26,7 +26,7 @@ Serve ```/index.html``` with any language.
 
 Remove the .git folder, and add your own. 
 
-```
+```bash
 rm -rf .git
 git init
 git add . && git commit -m "Look Ma! I'm on Github."
