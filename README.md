@@ -1,10 +1,8 @@
+![line](https://github.com/fwd/docs/raw/master/images/banner.png)
+
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
 <h2 align="center" style="font-size: 30px">Easy Docs (HTML + JSON + Markdown)</h2>
-
-![line](https://github.com/fwd/n2/raw/master/.github/line.png)
-
-![line](https://github.com/fwd/docs/raw/master/images/banner.png)
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
@@ -94,13 +92,13 @@ npm run update
 
 Give a ⭐️ if this project helped you!
 
-Contributions, issues and feature requests are welcome at [issues page](https://github.com/fwd/n2/issues).
+Contributions, issues and feature requests are welcome at [issues page](https://github.com/fwd/docs/issues).
 
 ## ❯ License
 
 MIT License
 
-Copyright © 2022 [@nano2dev](https://twitter.com/nano2dev).
+Copyright © [@nano2dev](https://twitter.com/nano2dev).
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
