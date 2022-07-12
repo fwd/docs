@@ -6,6 +6,10 @@
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
+## ❯ Live Demo
+
+<a href="https://docs.nano.to" target="_blank">https://docs.nano.to</a>
+
 ## ❯ Features
 
 - Write in Markdown
@@ -18,9 +22,6 @@
 - No Installing or Compiling
 - Free Hosting (w/ Github Pages)
 
-## ❯ Live Demo
-
-Nano.to Docs: <a href="https://docs.nano.to" target="_blank">https://docs.nano.to</a>
 
 ## ❯ 1. Install
 
