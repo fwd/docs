@@ -8,12 +8,13 @@
 
 ## ❯ Features
 
-- Free Hosting (w/ Github Pages)
 - Mobile Friendly
 - Changelog Section
 - FAQ Section
 - Dark Mode
 - Updatable
+- No Installing or Compiling
+- Free Hosting (w/ Github Pages)
 
 ## ❯ Live Demo
 
