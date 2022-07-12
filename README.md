@@ -1,3 +1,5 @@
+![line](https://github.com/fwd/docs/raw/master/images/banner.png)
+
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
 <h2 align="center" style="font-size: 30px">Free Hosted Docs (w/ Github Pages)</h2>
