@@ -48,7 +48,7 @@ Open ```docs``` in your favorite editor, and serve ```/index.html``` with a serv
 **Optional:**
 - [custom.css](/custom.css) - Optional, Custom CSS.
 - [index.html](/index.html) - Most things are configured via JSON file.
-- [/assets](/assets) - Docs CSS & JS Files. If you don't touch this, you can update anytime.
+- [/assets](/assets) - Docs CSS & JS Files.
 
 ## ❯ 3. Deploy
 
