@@ -13,6 +13,7 @@
 ## ❯ Features
 
 - Write in Markdown
+- Local & **Remote** Markdown Files
 - Changelog Section
 - FAQ Section
 - Dark Mode
