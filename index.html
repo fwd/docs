@@ -45,7 +45,7 @@
 		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
 		
 		<!-- Logo --> 
-        <a class="logo" title=""> 
+        <a class="logo" title="" @click="reload()"> 
             {{ config.logo }}
         </a> 
 
@@ -84,14 +84,20 @@
       <ul class="nav flex-column ">
 
         <li v-for="i of config.sections" class="nav-item">
-          <a class="nav-link active" @click="section(i)" href="#content">{{ i.title }}</a>
+          <a class="nav-link active" @click="section(i); show = false">{{ i.title }}</a>
           <ul v-if="active === i" class="nav flex-column">
             <li v-for="item of active.titles" class="nav-item"><a class="nav-link" :href="'#' + item.href">{{ item.title }}</a></li>
           </ul>
         </li>
 
-        <!-- <li v-if="config.changelog" class="nav-item"><a class="nav-link" href="#changelog">Changelog</a> -->
-        <!-- <li v-if="config.faq" class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li> -->
+        <li @click="show = 'faq'; active = false" v-if="config.faq" class="nav-item">
+            <a class="nav-link" href="#faq">{{ config.faqTitle || 'Frequently Asked Questions' }}</a>
+        </li>
+
+        <li @click="show = 'changelog'; active = false" v-if="config.changelog" class="nav-item">
+            <a class="nav-link" href="#changelog">{{ config.logTitle || 'Changelog' }}</a>
+        </li>
+
 
       </ul>
     </div>
@@ -105,13 +111,13 @@
         <div v-html="parseMarkdown(active.template)"></div>
     </div>
 
-    <!-- <hr class="divider"> -->
+    <!-- <hr v-if="config.faq && show == 'faq'" class="divider"> -->
 
 		<!-- FAQ
 		============================ -->
-		<section v-if="false && config.faq" id="faq">
+		<section v-if="config.faq && show == 'faq'" id="faq">
           
-          <h2>FAQ</h2>
+          <h2>{{ config.logTitle || 'FAQ' }}</h2>
 
           <!-- <p class="text-4">A FAQ is a list of frequently asked questions (FAQs) and answers on a particular topic.</p> -->
           
@@ -135,11 +141,9 @@
           
         </section>
         
-		<hr v-if="false && config.changelog" class="divider">
+        <section v-if="config.changelog && show == 'changelog'" id="changelog">
 
-        <section v-if="false && config.changelog" id="changelog">
-
-          <h2>Changelog</h2>
+          <h2>{{ config.logTitle || 'Changelog' }}</h2>
 
           <div v-for="change in config.changelog">
     	
@@ -159,19 +163,6 @@
     </div>
 	
   </div>
-
-  <footer v-if="false" id="footer" class="section bg-dark footer-text-light">
-    <div class="container">
-      <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
-        <li><a data-toggle="tooltip" href="https://twitter.com/harnishdesign/" target="_blank" title="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
-        <li><a data-toggle="tooltip" href="http://www.facebook.com/harnishdesign/" target="_blank" title="" data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a data-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/" target="_blank" title="" data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
-        <li><a data-toggle="tooltip" href="http://www.github.com/" target="_blank" title="" data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
-      </ul>
-      <p class="text-center">Copyright &copy; 2020 <a href="http://www.harnishdesign.net/idocs-one-page-documentation-html-template/">Fwd</a>. All Rights Reserved.</p>
-	  <p class="text-2 text-center mb-0">Design &amp; Develop by <a class="btn-link" target="_blank" href="http://www.harnishdesign.net/">HarnishDesign</a>.</p>
-    </div>
-  </footer>
   
 </div>
 <!-- Document Wrapper end --> 
@@ -179,18 +170,11 @@
 <!-- Back To Top --> 
 <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a> 
 
-<!-- JavaScript
-============================ -->
 <script src="assets/vendor/jquery/jquery.min.js"></script> 
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
-<!-- Highlight JS -->
 <script src="assets/vendor/highlight.js/highlight.min.js"></script> 
-<!-- Easing --> 
 <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script> 
-<!-- Magnific Popup --> 
 <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script> 
-<!-- Custom Script -->
-<!-- <script src="assets/js/theme.js"></script> -->
 <script src="assets/js/vue-markdown.js"></script>
 
 <script>
@@ -312,6 +296,7 @@
     var app = new Vue({
         el: '#main-wrapper',
         data: {
+            show: false,
             message: '<%- message %>',
             darkMode: false,
             active: false,
@@ -327,48 +312,45 @@
                 localStorage.setItem('darkMode', true)
             }
 
-            this.load((data) => {
-
-                document.title = data.title
-
-                window.load()
-
-                hljs.initHighlighting.called = false;
-                hljs.initHighlighting();
-
-                $('.lds-ellipsis').fadeOut(); // will first fade out the loading animation
-                $('.preloader').delay(333).fadeOut('slow'); // will fade out the white DIV that covers the website.
-                $('body').delay(333);
-
-                this.section(data.sections[0])
-                
-                var hash = window.location.pathname !== '/' ? window.location.pathname : window.location.hash
-
-                if (hash && self.config.redirect) {
-                    for (var i of this.config.redirect) {
-                        if (i.path === hash.replace('#', '').replace('/', '')) {
-                            this.section(data.sections.find(a => a.file === i.file))
-                        }
-                    }
-                }
-
-                if (hash && !self.config.redirect) {
-                    setTimeout(() => {
-
-                        // if (window.location.pathname !== '/') {
-                        //     window.history.pushState(window.location.pathname, "", '/')
-                        // }
-                        
-                        self.redirect(hash)
-
-                    }, 500)
-                }
-
-
-            })
+            this.reload()
 
         },
         methods: {
+            reload() {
+                var self = this
+                this.load((data) => {
+
+                    document.title = data.title
+
+                    window.load()
+
+                    hljs.initHighlighting.called = false;
+                    hljs.initHighlighting();
+
+                    $('.lds-ellipsis').fadeOut(); // will first fade out the loading animation
+                    $('.preloader').delay(333).fadeOut('slow'); // will fade out the white DIV that covers the website.
+                    $('body').delay(333);
+
+                    this.section(data.sections[0])
+                    
+                    var hash = window.location.pathname !== '/' ? window.location.pathname : window.location.hash
+
+                    if (hash && self.config.redirect) {
+                        for (var i of this.config.redirect) {
+                            if (i.path === hash.replace('#', '').replace('/', '')) {
+                                this.section(data.sections.find(a => a.file === i.file))
+                            }
+                        }
+                    }
+
+                    if (hash && !self.config.redirect) {
+                        setTimeout(() => {
+                            self.redirect(hash)
+                        }, 500)
+                    }
+
+                })
+            },
             redirect(hash) {
                 window.location.hash = '#' + hash.replace('#', '').replace('/', '')
                 return 
@@ -376,7 +358,6 @@
             toggleDarkMode() {
                 if (this.darkMode) {
                     this.darkMode = false
-                    // document.documentElement.className += 'dark-mode'
                     localStorage.setItem('darkMode', false)
                     window.location.reload()
                 } else {
@@ -412,7 +393,6 @@
                 if (!i) return
                 i.slug = this.slug(i.title)
                 var url = i.file || i.url
-                // window.history.pushState(window.location.pathname, "", '/' + i.slug.replace('api', ''))
                 if (url) {
                     axios.get(url.replace('.md', '') + '.md').then((res) => {
                         i.template = res.data
@@ -429,7 +409,6 @@
                                 }) : titles
                             self.active.titles = titles
                             self.$forceUpdate()
-                            // console.log( titles )
                         }, 100)
                     })
                     return
@@ -447,6 +426,7 @@
                             }
                         }) : titles
                     self.active.titles = titles
+                    self.show = false
                     self.$forceUpdate()
                     // console.log( titles )
                 }, 100)
@@ -455,6 +435,12 @@
                 axios.get('./config.json').then((res) => {
                     this.config = res.data
                     if (cb) cb(res.data)
+                }).catch((e) => {
+                    if (e.message.includes('properties of')) {
+                        alert('The config JSON has bad syntax. Fix it, please. Use a "JSON Linter" to find issue easily.')
+                    } else {
+                        alert("Error:", e.message)
+                    }
                 })
             }
         }

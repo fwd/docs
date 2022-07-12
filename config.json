@@ -4,12 +4,12 @@
 	"version": "v1.0",
 	"sections": [
 		{
-			"title": "Welcome",
-			"url": "https://raw.githubusercontent.com/fwd/docs/master/README.md"
-		},
-		{
 			"title": "Get Started",
 			"file": "/pages/getting-started.md"
+		},
+		{
+			"title": "Remote Doc",
+			"url": "https://raw.githubusercontent.com/fwd/n2/master/readme.md"
 		}
 	],
 	"menu": [
@@ -20,7 +20,7 @@
 		}
 
 	],
-	"faq": [
+	"faq": [,
 		{
 			"title": "What does royalty free mean?",
 			"body": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
