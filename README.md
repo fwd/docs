@@ -22,7 +22,6 @@
 - Light/Dark Mode
 - Offline Support
 - Mobile Friendly
-- And More
 
 ## ❯ 1. Clone
 
@@ -63,7 +62,7 @@ git remote add origin git@github.com:NAME/REPO.git
 git push -u origin "master"
 ```
 
-## ❯ Enable Free Hosting
+## ❯ 4. Enable Free Hosting
 
 - Github Pages
 - Repo must be Public
@@ -83,7 +82,7 @@ Website: https://NAME.github.io/REPO
 
 Official Docs: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
 
-## ❯ ✅ Done
+## ❯ ✅ Done 
 
 You now have free, reliable hosting for your docs. Nice.
 
@@ -93,7 +92,7 @@ You now have free, reliable hosting for your docs. Nice.
 
 #### Private Hosting
 
-> If you want to keep Docs private. Serve ```/index.html``` on your own server. Bring your own Auth.
+If you want to keep Docs private. Serve ```/index.html``` on your own server. Bring your own Auth.
 
 #### 404 & Redirects
 - Github Pages allows Redirect by creating a 404.html file.
@@ -105,13 +104,12 @@ cp index.html 404.html
 
 #### Updating Docs
 
-More features are planned for **Easy Docs**. You can **update** at any time by running:
+More features are planned for **Easy Docs**. If you don't edit ```/assets``` and ```index.html```. You can update at anytime. 
 
 ```
 npm run update
 ```
 
-> **Warning:** Updating replaces ```/assets``` and ```index.html```. 
 
 **Planned Features**
 
