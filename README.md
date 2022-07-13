@@ -91,7 +91,7 @@ You now have free, reliable hosting for your docs. Nice.
 
 ## ❯ Further Reading
 
-#### ❯ Private Hosting
+#### Private Hosting
 
 > If you want to keep Docs private. Serve ```/index.html``` on your own server. Bring your own Auth.
 
