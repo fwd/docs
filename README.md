@@ -79,7 +79,7 @@ Website: https://NAME.github.io/REPO
 - "Custom domain" → "Add Domain"
 - Save
 
-#### Optional: Domain DNS Settings
+#### Domain DNS Settings
 
 - Create **A** record that points to: **185.199.108.153**
 - If using Cloudflare, make sure to disable proxy.
