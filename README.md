@@ -13,12 +13,12 @@
 
 ## ❯ Features
 
-- Changelog & FAQ Section
 - Write in Markdown
-- Edit Docs on Github
+- Changelog & FAQ Section
 - Local & **Remote** Markdown Files
 - No Installing or Compiling
 - Free Hosting (w/ Github Pages)
+- Edit Docs on Github (If you want)
 - Light/Dark Mode
 - Offline Support
 - Mobile Friendly
