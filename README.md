@@ -13,14 +13,14 @@
 
 ## ❯ Features
 
+- Edit Docs on Github
 - Write in Markdown
 - Local & **Remote** Markdown Files
-- Changelog Section
-- FAQ Section
-- Dark Mode
+- Light/Dark Mode
 - Offline Support
 - Mobile Friendly
-- Updatable Code
+- Updatable Package
+- Changelog & FAQ Section
 - Source Control Friendly
 - No Installing or Compiling
 - Free Hosting (w/ Github Pages)
