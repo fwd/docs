@@ -95,19 +95,30 @@ You now have free, reliable hosting for your docs. Nice.
 
 > If you want to keep Docs private. Serve ```/index.html``` on your own server. Bring your own Auth.
 
-#### Redirects
+#### 404 & Redirects
 - Github Pages allows Redirect by creating a 404.html file.
 - Run ```npm build``` to do this automatically
 
+```
+cp index.html 404.html
+```
+
 #### Updating Docs
 
-You can pull the latest version of "Easy Docs" at any time by running:
+Easy Docs gets better over time. You can pull the latest version of "Easy Docs" at any time by running:
 
 ```
 npm run update
 ```
 
 > Warning: This will override ```/assets``` and ```index.html```. You can manually update by cloning this repo again and replacing.
+
+By not touching ```/assets``` and ```index.html```. You are eligble to update. 
+
+**Planned Features**
+
+- Codepen Blocks
+- [API Testing](https://petstore3.swagger.io/)
 
 ## ❯ Contributing
 
