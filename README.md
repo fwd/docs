@@ -22,8 +22,9 @@
 - Light/Dark Mode
 - Offline Support
 - Mobile Friendly
+- And More
 
-## ❯ 1. Install
+## ❯ 1. Clone
 
 ```bash
 git clone git@github.com:fwd/docs.git && cd docs
@@ -62,17 +63,18 @@ git remote add origin git@github.com:NAME/REPO.git
 git push -u origin "master"
 ```
 
-## ❯ Free Hosting
+## ❯ Enable Free Hosting
 
-- Repo must be Public.
-- Visit your Repo's [Settings](/../../settings/pages) Page
+- Github Pages
+- Repo must be Public
+- Visit [Settings](/../../settings/pages)
 - Source → "Master" → "/Root" → **\[ Save \]**
 
 Website: https://NAME.github.io/REPO
 
 #### Optional: Custom Domain:
 
-- Visit your Repo's [Settings](/../../settings/pages) Page
+- Visit[Settings](/../../settings/pages)
 - "Custom domain" → "Add Domain" → **\[ Save \]**
 
 #### Domain DNS Settings
