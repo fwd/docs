@@ -1,74 +1,44 @@
-.dark-mode li,
-.dark-mode p,
-.dark-mode h1,
-.dark-mode h2,
-.dark-mode h3,
-.dark-mode h4,
-.dark-mode h5,
-.dark-mode h6,
-.dark-mode .hljs-string,
-.dark-mode .hljs-built_in,
-.dark-mode .hljs-keyword,
-.dark-mode .hljs-number,
-.dark-mode .hljs-attribute,
-.dark-mode .hljs-regexp,
-.dark-mode .hljs-comment,
-.dark-mode .nav .nav-item .nav-link,
-.dark-mode .idocs-navigation .nav .nav .nav-link {
+.dark-mode li, .dark-mode p, .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6, .dark-mode .hljs-string, .dark-mode .hljs-built_in, .dark-mode .hljs-keyword, .dark-mode .hljs-number, .dark-mode .hljs-attribute, .dark-mode .hljs-regexp, .dark-mode .hljs-comment, .dark-mode .nav .nav-item .nav-link, .dark-mode .idocs-navigation .nav .nav .nav-link {
     color: #ffffffdb;
 }
-
 .dark-mode .nav .nav-item .nav-link {
     color: hsl(0deg 0% 100% / 83%);
     font-weight: normal;
     letter-spacing: 0.5px;
     text-shadow: 1px 1px 1px #00000024;
 }
-
 .dark-mode .navbar-toggler span {
     background: #FFF;
 }
-
-.dark-mode #header,
-.dark-mode #header .logo {
-    color:  #FFF;
+.dark-mode #header, .dark-mode #header .logo {
+    color: #FFF;
 }
-
 .dark-mode .dark-toggle {
     filter: invert(0);
 }
-
 .dark-mode #header .navbar {
     background: #2e3136;
     border-bottom: 1px solid #ffffff17;
 }
-
 .dark-mode .idocs-navigation .nav .nav .nav-item .nav-link:not(.active):after {
-  border-left: 1px solid rgb(255 255 255 / 15%);
+    border-left: 1px solid rgb(255 255 255 / 15%);
 }
-
 .dark-mode .accordion .card-body {
-  color: #FFF;
+    color: #FFF;
 }
-
-
 .dark-mode code {
     background-color: #011627;
     border-radius: 4px;
     color: #fffdfd !important;
     line-height: 26px;
 }
-
-
 .dark-mode .hljs-string {
     /*color: red;*/
 }
-
 .dark-mode .accordion:not(.accordion-alternate) .card-header a.collapsed {
     background-color: #181b1f;
     color: #ffffff;
 }
-
 /*.dark-mode blockquote {
   border-left: 5px solid #2a2a2a;
 }*/
@@ -76,30 +46,22 @@
 .dark-mode a, .dark-mode a:focus {
     color: #04a798;
 }
-
 .dark-mode .sticky-top {
     /*filter: invert(1);*/
 }
-
 .idocs-content {
     padding-bottom: 50px;
 }
-
-.dark-mode .preloader,
-.dark-mode .idocs-navigation,
-.dark-mode .sticky-top,
-.dark-mode .idocs-content {
+.dark-mode .preloader, .dark-mode .idocs-navigation, .dark-mode .sticky-top, .dark-mode .idocs-content {
     background: #2f3136;
 }
-
 .dark-mode .idocs-content {
     padding-bottom: 50px;
 }
 .dark-mode .idocs-navigation {
     /*background: #000000;*/
 }
-
-.dark-mode .primary-menu ul.navbar-nav > li > a:not(.btn) {
-    color:  #FFF;
+.dark-mode .primary-menu ul.navbar-nav>li>a:not(.btn) {
+    color: #FFF;
     /*background: #202327;*/
 }
