@@ -105,13 +105,13 @@ cp index.html 404.html
 
 #### Updating Docs
 
-Easy Docs gets better over time. You can pull the latest version of "Easy Docs" at any time by running:
+More features are planned for **Easy Docs**. You can **update** at any time by running:
 
 ```
 npm run update
 ```
 
-Updating replaces ```/assets``` and ```index.html```. You can manually update by cloning this repo again and replacing.
+> **Warning:** Updating replaces ```/assets``` and ```index.html```. 
 
 **Planned Features**
 
