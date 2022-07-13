@@ -18,8 +18,9 @@
 - Changelog Section
 - FAQ Section
 - Dark Mode
-- Updatable
+- Offline Support
 - Mobile Friendly
+- Updatable Code
 - Source Control Friendly
 - No Installing or Compiling
 - Free Hosting (w/ Github Pages)
@@ -31,7 +32,7 @@
 git clone git@github.com:fwd/docs.git && cd docs
 ```
 
-## ❯ 2. Create
+## ❯ 2. Edit
 
 Open ```docs``` in your favorite editor, and serve ```/index.html``` with a server. 
 
@@ -64,38 +65,36 @@ git remote add origin git@github.com:NAME/REPO.git
 git push -u origin "master"
 ```
 
-## ❯ 4. Free Website Hosting
+## ❯ Free Hosting
 
 - Repo must be Public.
 - Visit your Repo's [Settings](/../../settings/pages) Page
-- Source --> "Master" --> "/Root" --> **\[ Save \]**
+- Source → "Master" → "/Root" → **\[ Save \]**
 
 Website: https://NAME.github.io/REPO
 
 #### Optional: Custom Domain:
 
 - Visit your Repo's [Settings](/../../settings/pages) Page
-- "Custom domain" --> "Add Domain" --> **\[ Save \]**
+- "Custom domain" → "Add Domain" → **\[ Save \]**
 
 #### Domain DNS Settings
-- Create **A** record that points to: 185.199.108.153
+- Create **A** record that points to: **185.199.108.153**
 - If using Cloudflare, make sure to disable proxy.
 
 Official Docs: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
-
-#### ❯ Private Hosting
-
-> If you want to keep Docs private. Serve ```/index.html``` and the rest of the files on your own server. Bring your own Auth.
 
 ## ❯ ✅ Done
 
 You now have free, reliable hosting for your docs. Nice.
 
-Visit: https://NAME.github.io/REPO
-
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
 ## ❯ Further Reading
+
+#### ❯ Private Hosting
+
+> If you want to keep Docs private. Serve ```/index.html``` on your own server. Bring your own Auth.
 
 #### Redirects
 - Github Pages allows Redirect by creating a 404.html file.
@@ -109,7 +108,7 @@ You can pull the latest version of "Easy Docs" at any time by running:
 npm run update
 ```
 
-> Warning: This will override ```/assets``` and ```index.html```. You can always update manually by cloning this repo again and replacing the files you need.
+> Warning: This will override ```/assets``` and ```index.html```. You can manually update by cloning this repo again and replacing.
 
 ## ❯ Contributing
 
