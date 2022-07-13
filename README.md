@@ -13,18 +13,15 @@
 
 ## ❯ Features
 
-- Edit Docs on Github
+- Changelog & FAQ Section
 - Write in Markdown
+- Edit Docs on Github
 - Local & **Remote** Markdown Files
+- No Installing or Compiling
+- Free Hosting (w/ Github Pages)
 - Light/Dark Mode
 - Offline Support
 - Mobile Friendly
-- Updatable Package
-- Changelog & FAQ Section
-- Source Control Friendly
-- No Installing or Compiling
-- Free Hosting (w/ Github Pages)
-
 
 ## ❯ 1. Install
 
