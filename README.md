@@ -64,19 +64,21 @@ git push -u origin "master"
 
 ## ❯ 4. Enable Free Hosting
 
-- Github Pages
-- Repo must be Public
-- Visit [Settings](/../../settings/pages)
+**Github Pages**
+
+- Github repo must be public
+- Go to [Settings Page](/../../settings/pages)
 - Source → "Master" → "/Root" → **\[ Save \]**
 
 Website: https://NAME.github.io/REPO
 
 #### Optional: Custom Domain:
 
-- Visit[Settings](/../../settings/pages)
+- Go to [Settings Page](/../../settings/pages)
 - "Custom domain" → "Add Domain" → **\[ Save \]**
 
-#### Domain DNS Settings
+#### Optional: Domain DNS Settings
+
 - Create **A** record that points to: **185.199.108.153**
 - If using Cloudflare, make sure to disable proxy.
 
@@ -84,7 +86,7 @@ Official Docs: https://docs.github.com/en/pages/configuring-a-custom-domain-for-
 
 ## ❯ ✅ Done 
 
-You now have free, reliable hosting for your docs. Nice.
+You now have free, reliable hosting for your docs. Nice. 
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
@@ -92,7 +94,7 @@ You now have free, reliable hosting for your docs. Nice.
 
 #### Private Hosting
 
-If you want to keep Docs private. Serve ```/index.html``` on your own server. Bring your own Auth.
+To keep Docs private, serve ```/index.html``` on your own server. Bring your own Auth.
 
 #### 404 & Redirects
 - Github Pages allows Redirect by creating a 404.html file.
@@ -113,7 +115,7 @@ npm run update
 
 **Planned Features**
 
-- Codepen Blocks
+- Codepen
 - [API Testing](https://petstore3.swagger.io/)
 
 ## ❯ Contributing
