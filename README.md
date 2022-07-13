@@ -68,14 +68,16 @@ git push -u origin "master"
 
 - Github repo must be public
 - Go to [Settings Page](/../../settings/pages)
-- Source → "Master" → "/Root" → **\[ Save \]**
+- Source → "Master" → "/Root"
+- Save
 
 Website: https://NAME.github.io/REPO
 
 #### Optional: Custom Domain:
 
 - Go to [Settings Page](/../../settings/pages)
-- "Custom domain" → "Add Domain" → **\[ Save \]**
+- "Custom domain" → "Add Domain"
+- Save
 
 #### Optional: Domain DNS Settings
 
