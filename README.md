@@ -111,9 +111,7 @@ Easy Docs gets better over time. You can pull the latest version of "Easy Docs" 
 npm run update
 ```
 
-> Warning: This will override ```/assets``` and ```index.html```. You can manually update by cloning this repo again and replacing.
-
-By not touching ```/assets``` and ```index.html```. You are eligble to update. 
+Updating replaces ```/assets``` and ```index.html```. You can manually update by cloning this repo again and replacing.
 
 **Planned Features**
 
