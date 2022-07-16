@@ -32,7 +32,7 @@
   <header id="header" class="sticky-top"> 
     <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
       <div class="container-fluid">
-        <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+        <button @click="menu =!menu" id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
         
         <!-- Logo --> 
         <a class="logo" title="" @click="reload()"> 
@@ -70,13 +70,13 @@
     
     <!-- Sidebar Navigation
     ============================ -->
-    <div class="idocs-navigation">
+    <div :class="`idocs-navigation ${menu ? 'active' : ''}`">
       <ul class="nav flex-column ">
 
         <li v-for="i of config.sections" class="nav-item">
-          <a class="nav-link active" @click="section(i); show = false; scrollTop()">{{ i.title }}</a>
+          <a class="nav-link active" @click="section(i); show = false; scrollTop();">{{ i.title }}</a>
           <ul v-if="active === i" class="nav flex-column">
-            <li v-for="item of active.titles" class="nav-item"><a class="nav-link" @click="scrollTo(item)">{{ item.title }}</a></li>
+            <li v-for="item of active.titles" class="nav-item"><a class="nav-link" @click="scrollTo(item); closeNav()">{{ item.title }}</a></li>
           </ul>
         </li>
 
@@ -208,10 +208,18 @@
             $(this).toggleClass('show');
         });
 
-        $('#sidebarCollapse').on('click', function () {
-            $('#sidebarCollapse span:nth-child(3)').toggleClass('w-50');
-            $('.idocs-navigation').toggleClass('active');
-        });
+        // $('#sidebarCollapse').on('click', function () {
+        //     $('#sidebarCollapse span:nth-child(3)').toggleClass('w-50');
+        //     $('.idocs-navigation').toggleClass('active');
+        // });
+
+        // window.test = function () {
+        //     // alert('asd')
+        //      $('#sidebarCollapse').on('click', function () {
+        //         $('#sidebarCollapse span:nth-child(3)').toggleClass('w-50');
+        //         $('.idocs-navigation').toggleClass('active');
+        //     });
+        // }
 
         // $('.smooth-scroll, .nav-link, .nav-item').on('click', function(event) {
         //     event.preventDefault();
@@ -255,6 +263,7 @@
             show: false,
             message: '<%- message %>',
             darkMode: false,
+            menu: false,
             active: false,
             config: {}
         },
@@ -271,6 +280,10 @@
 
         },
         methods: {
+            closeNav() {
+                this.menu = false
+               // window.test()
+            },
             scrollTop(i) {
                 // console.log(i)
                 // window.location.hash = '#' + i.href
