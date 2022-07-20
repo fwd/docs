@@ -5,7 +5,7 @@
 	"sections": [
 		{
 			"title": "Get Started",
-			"file": "/pages/getting-started.md"
+			"file": "pages/getting-started.md"
 		},
 		{
 			"title": "Remote Doc",
