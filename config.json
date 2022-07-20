@@ -1,15 +1,11 @@
 {
-	"title": "Nano.to Documentation",
-	"logo": "Docs",
-	"version": "v1.0",
+	"title": "Nanogram Help Docs",
+	"logo": "Help",
+	"version": "v0.1",
 	"sections": [
 		{
 			"title": "Get Started",
 			"file": "pages/getting-started.md"
-		},
-		{
-			"title": "Remote Doc",
-			"url": "https://raw.githubusercontent.com/fwd/n2/master/readme.md"
 		}
 	],
 	"menu": [
