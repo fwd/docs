@@ -397,7 +397,8 @@
                             self.active.titles = titles
                             self.$forceUpdate()
                             // console.log(window.location.pathname)
-                            if (self.loaded) history.pushState({}, '', '/' + i.slug + (window.location.hash ? window.location.hash : ''))
+                            var new_path = (window.location.origin + window.location.pathname) + '/' + i.slug + (window.location.hash ? window.location.hash : '')
+                            if (self.loaded) history.pushState({}, '', new_path)
                             if (window.location.hash) {
                                 setTimeout(() => {
                                     self.scrollTo(null, window.location.hash.replace('#', ''))
