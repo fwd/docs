@@ -263,10 +263,11 @@
         },
         methods: {
             pushtag(item) {
-                history.pushState({}, '', `#${item}`);
+                // history.pushState({}, '', `#${item}`);
             },
             pushstate(item) {
-                // history.pushState({}, '', item)
+                // var new_path = (window.location.origin + window.location.pathname)
+                history.pushState({}, '', `${window.location.pathname}${item && item.includes('/') ? item : '/' + item}`)
             },
             closeNav() {
                 this.menu = false
@@ -400,9 +401,7 @@
                                 }) : titles
                             self.active.titles = titles
                             self.$forceUpdate()
-                            // console.log(window.location.pathname)
-                            // var new_path = (window.location.origin + window.location.pathname) + '/' + i.slug + (window.location.hash ? window.location.hash : '')
-                            if (self.loaded) self.pushstate(new_path)
+                            if (self.loaded) self.pushstate('/' + i.slug + (window.location.hash ? window.location.hash : ''))
                             if (window.location.hash) {
                                 setTimeout(() => {
                                     self.scrollTo(null, window.location.hash.replace('#', ''))
