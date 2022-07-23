@@ -263,11 +263,11 @@
         },
         methods: {
             pushtag(item) {
-                // history.pushState({}, '', `#${item}`);
+                history.pushState({}, '', `#${item}`);
             },
             pushstate(item) {
                 // var new_path = (window.location.origin + window.location.pathname)
-                history.pushState({}, '', `${window.location.pathname}${item}`)
+                history.pushState({}, '', `${item.replace('/', '')}`)
             },
             closeNav() {
                 this.menu = false
