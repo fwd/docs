@@ -267,7 +267,7 @@
             },
             pushstate(item) {
                 // var new_path = (window.location.origin + window.location.pathname)
-                history.pushState({}, '', `${window.location.pathname}${item && item.includes('/') ? item : '/' + item}`)
+                history.pushState({}, '', `${window.location.pathname}${item}`)
             },
             closeNav() {
                 this.menu = false
