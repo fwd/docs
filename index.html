@@ -306,7 +306,8 @@
                     $('.preloader').delay(333).fadeOut('slow');
                     $('body').delay(333);
                     
-                    var hash = window.location.pathname !== '/' ? window.location.pathname : window.location.hash
+                    var hash = window.location.pathname.split('/').pop() ? '/' + window.location.pathname.split('/').pop() : window.location.hash
+                        // hash = window.location.pathname !== '/' ? window.location.pathname : window.location.hash
 
                     if (hash == '/faq') {
                         this.show = 'faq'
