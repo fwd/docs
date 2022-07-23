@@ -22,6 +22,7 @@
 - Light/Dark Mode
 - Offline Support
 - Mobile Friendly
+- **Space Friendly 🚀**
 
 ## ❯ 1. Clone
 
