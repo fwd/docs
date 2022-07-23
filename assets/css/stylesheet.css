@@ -712,6 +712,12 @@ hr {
     color: #ffffff;
     /*letter-spacing: 0.7px;*/
 }
+.nav .nav-item .nav-link.active {
+    /*color: #0c2f55;*/
+    /*color: #ffffffad;*/
+    /*letter-spacing: 0.7px;*/
+    font-weight: bold !important;
+}
 pre {
     overflow: auto;
     position: relative;

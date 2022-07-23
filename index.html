@@ -76,18 +76,18 @@
       <ul class="nav flex-column ">
 
         <li v-for="i of config.sections" class="nav-item">
-          <a class="nav-link active" @click="section(i); show = false; scrollTop();">{{ i.title }}</a>
+          <a :class="`nav-link ${ (!show && !active) || active.title == config.sections[0].title || (active && active.title == i.title) ? 'active' : '' }`" @click="section(i); show = false; scrollTop();">{{ i.title }}</a>
           <ul v-if="active === i" class="nav flex-column">
-            <li v-for="item of active.titles" class="nav-item"><a class="nav-link" @click="scrollTo(item); closeNav()">{{ item.title }}</a></li>
+            <li v-for="item of active.titles" class="nav-item"><a :class="`nav-link ${href === slug(item.title) ? 'active' : ''}`" @click="scrollTo(item); closeNav()">{{ item.title }}</a></li>
           </ul>
         </li>
 
-        <li @click="show = 'faq'; active = false; closeNav();" v-if="config.faq" class="nav-item">
-            <a class="nav-link" @click="scrollTo('faq'); scrollTop();">{{ config.faqTitle || 'Frequently Asked Questions' }}</a>
+        <li @click="show = 'faq'; active = false; closeNav(); pushstate('/faq')" v-if="config.faq" class="nav-item">
+            <a :class="`nav-link ${show === 'faq' ? 'active' : ''}`" @click="scrollTo('faq'); scrollTop();">{{ config.faqTitle || 'Frequently Asked Questions' }}</a>
         </li>
 
-        <li @click="show = 'changelog'; active = false; closeNav();" v-if="config.changelog" class="nav-item">
-            <a class="nav-link" @click="scrollTo('changelog'); scrollTop();">{{ config.changeLogTitle || 'Changelog' }}</a>
+        <li @click="show = 'changelog'; active = false; closeNav(); pushstate('/changelog')" v-if="config.changelog" class="nav-item">
+            <a :class="`nav-link ${show === 'changelog' ? 'active' : ''}`" @click="scrollTo('changelog'); scrollTop();">{{ config.changeLogTitle || 'Changelog' }}</a>
         </li>
 
 
@@ -160,15 +160,15 @@
 
 <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a> 
 
-<script src="assets/vendor/jquery/jquery.min.js"></script> 
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
-<script src="assets/vendor/highlight.js/highlight.min.js"></script> 
-<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script> 
-<script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script> 
-<script src="assets/js/showdown.min.js"></script>
-<script src="assets/js/axios.min.js"></script>
-<script src="assets/js/vue.min.js"></script>
-<script src="assets/js/vue.markdown.min.js"></script>
+<script src="../assets/vendor/jquery/jquery.min.js"></script> 
+<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+<script src="../assets/vendor/highlight.js/highlight.min.js"></script> 
+<script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script> 
+<script src="../assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script> 
+<script src="../assets/js/showdown.min.js"></script>
+<script src="../assets/js/axios.min.js"></script>
+<script src="../assets/js/vue.min.js"></script>
+<script src="../assets/js/vue.markdown.min.js"></script>
 
 <script>
     window.load = function() {
@@ -238,6 +238,8 @@
     var app = new Vue({
         el: '#main-wrapper',
         data: {
+            loaded: false,
+            href: false,
             show: false,
             message: '<%- message %>',
             darkMode: false,
@@ -256,12 +258,17 @@
 
             this.reload()
 
+            this.loaded = true
+
         },
         methods: {
+            pushstate(item) {
+                history.pushState({}, '', item)
+            },
             closeNav() {
                 this.menu = false
             },
-            scrollTop(i) {
+            scrollTop(i, href) {
                 // console.log(i)
                 // window.location.hash = '#' + i.href
                 $('html,body').animate({
@@ -269,17 +276,15 @@
                 }, 50);
                 // this.redirect(i.hash)
             },
-            scrollTo(i) {
-                // console.log(i)
-                // window.location.hash = '#' + i.href
-                // if 
+            scrollTo(i, href) {
+                var self = this
+                href = href || i.href
                 $('html,body').animate({
-                    scrollTop: $('#' + i.href).offset() ? $('#' + i.href).offset().top - 100 : 0
+                    scrollTop: $('#' + href).offset() ? $('#' + href).offset().top - 100 : 0
                 }, 50, function() {
-                    // location.hash = i.href;
-                    history.pushState({}, '', '#' + i.href);
+                    if (href) history.pushState({}, '', `#${href}`);
                 });
-                // this.redirect(i.hash)
+                this.href = href
             },
             reload() {
                 var self = this
@@ -295,10 +300,28 @@
                     $('.lds-ellipsis').fadeOut(); 
                     $('.preloader').delay(333).fadeOut('slow');
                     $('body').delay(333);
-
-                    this.section(data.sections[0])
                     
                     var hash = window.location.pathname !== '/' ? window.location.pathname : window.location.hash
+
+                    if (hash == '/faq') {
+                        this.show = 'faq'
+                        return 
+                    }
+
+                    if (hash == '/changelog') return this.show = 'changelog'; this.active = true; 
+
+                    this.section(data.sections[0])
+
+                    var found = data.sections.find(a => {
+                        return ('#' + self.slug(a.title).toLowerCase()) === hash.replace('/', '#')
+                    })
+
+                    if (found) {
+                        setTimeout(() => {
+                            this.section(found)
+                        }, 100)
+                        return
+                    }
 
                     if (hash && self.config.redirect) {
                         for (var i of this.config.redirect) {
@@ -343,14 +366,14 @@
               return parsedHeadings
             },
             parseMarkdown(markdownText) {
-                var converter = new showdown.Converter()
+                var converter = new showdown.Converter({ openLinksInNewWindow: true, tasklists: true, rawHeaderId: true, })
                 return converter.makeHtml(markdownText);
             },
             title(text) {
                 return text.trim().replace(/[^\.\w\s-]/g, '')
             },
             slug(text) {
-                return text.toLowerCase().trim().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '').replace(/^-+|-+$/g, '')
+                return text.toLowerCase().trim().replace(/[^\w\s-]/g, '').trim().replace(/[\s_-]+/g, '-')
             },
             section(i) {
                 var self = this
@@ -373,10 +396,19 @@
                                 }) : titles
                             self.active.titles = titles
                             self.$forceUpdate()
+                            // console.log(window.location.pathname)
+                            if (self.loaded) history.pushState({}, '', '/' + i.slug + (window.location.hash ? window.location.hash : ''))
+                            if (window.location.hash) {
+                                setTimeout(() => {
+                                    self.scrollTo(null, window.location.hash.replace('#', ''))
+                                }, 500)
+                            }
+                            document.title = i.title  + ' - ' + self.config.title;
                         }, 100)
                     })
                     return
                 }
+                // console.log("a")
                 this.active = i
                 if (i.text || i.markdown) i.template = i.text || i.markdown
                 setTimeout(() => {
@@ -386,13 +418,16 @@
                         titles = titles ? titles.map(a => {
                             return {
                                 title: self.title(a),
-                                href: self.slug(a)
+                                href: self.slug(a.title)
                             }
                         }) : titles
                     self.active.titles = titles
                     self.show = false
+                    // console.log( i.slug )
+                    // history.pushState({}, '', '#' + self.slug(i.title));
                     self.$forceUpdate()
                 }, 100)
+            // console.log( "SDfdf" )
             },
             load(cb) {
                 axios.get('./config.json').then((res) => {

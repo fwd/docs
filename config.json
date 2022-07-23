@@ -1,11 +1,15 @@
 {
-	"title": "Nanogram Help Docs",
-	"logo": "Help",
+	"title": "Easy Docs",
+	"logo": "Docs",
 	"version": "v0.1",
 	"sections": [
 		{
 			"title": "Get Started",
 			"file": "pages/getting-started.md"
+		},
+		{
+			"title": "Remote Example",
+			"file": "https://raw.githubusercontent.com/fwd/nano-docs/master/source/checkout.md"
 		}
 	],
 	"menu": [
