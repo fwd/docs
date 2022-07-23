@@ -262,8 +262,11 @@
 
         },
         methods: {
+            pushtag(item) {
+                history.pushState({}, '', `#${item}`);
+            },
             pushstate(item) {
-                history.pushState({}, '', item)
+                // history.pushState({}, '', item)
             },
             closeNav() {
                 this.menu = false
@@ -282,7 +285,8 @@
                 $('html,body').animate({
                     scrollTop: $('#' + href).offset() ? $('#' + href).offset().top - 100 : 0
                 }, 50, function() {
-                    if (href) history.pushState({}, '', `#${href}`);
+                    if (href) self.pushtag(href)
+                    // if (href) history.pushState({}, '', `#${href}`);
                 });
                 this.href = href
             },
@@ -397,8 +401,8 @@
                             self.active.titles = titles
                             self.$forceUpdate()
                             // console.log(window.location.pathname)
-                            var new_path = (window.location.origin + window.location.pathname) + '/' + i.slug + (window.location.hash ? window.location.hash : '')
-                            if (self.loaded) history.pushState({}, '', new_path)
+                            // var new_path = (window.location.origin + window.location.pathname) + '/' + i.slug + (window.location.hash ? window.location.hash : '')
+                            if (self.loaded) self.pushstate(new_path)
                             if (window.location.hash) {
                                 setTimeout(() => {
                                     self.scrollTo(null, window.location.hash.replace('#', ''))
