@@ -6,6 +6,10 @@
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
+## Live Demo
+
+<a href="https://docs.nano.to" target="_blank">https://docs.nano.to</a>
+
 ## Features
 
 - 1 Minute Install
@@ -21,10 +25,6 @@
 - Mobile Optimized
 - Developer Friendly 
 - **Mars Ready 🚀**
-
-## Live Demo
-
-<a href="https://docs.nano.to" target="_blank">https://docs.nano.to</a>
 
 ## ❯ 1. Install
 
