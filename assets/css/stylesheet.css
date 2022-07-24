@@ -2858,3 +2858,7 @@ ul {
 .nav .nav-item .nav-link {
     cursor: pointer;
 }
+
+img[alt="line"] {
+    height: 30px;
+}
