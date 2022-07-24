@@ -25,7 +25,7 @@ DON'T EDIT THIS FILE. USE CONFIG.JSON INSTEAD.
     <link rel="stylesheet" type="text/css" href="assets/css/dark-mode.css" />
     <link rel="stylesheet" type="text/css" href="../custom.css" />
   </head>
-  <body data-target=".idocs-navigation">
+  <body data-target=".fwd-navigation">
     <div class="preloader">
       <div class="lds-ellipsis">
         <div></div>
@@ -72,7 +72,7 @@ DON'T EDIT THIS FILE. USE CONFIG.JSON INSTEAD.
         </nav>
       </header>
       <div id="content" role="main">
-        <div :class="`idocs-navigation ${menu ? 'active' : ''}`">
+        <div :class="`fwd-navigation ${menu ? 'active' : ''}`">
           <ul class="nav flex-column ">
             <li v-for="i of config.sections" class="nav-item">
               <a :class="`nav-link ${ (!show && !active) || active.title == config.sections[0].title || (active && active.title == i.title) ? 'active' : '' }`" @click="section(i); show = false; scrollTop();">{{ i.title }}</a>
@@ -90,7 +90,7 @@ DON'T EDIT THIS FILE. USE CONFIG.JSON INSTEAD.
             </li>
           </ul>
         </div>
-        <div class="idocs-content">
+        <div class="fwd-content">
           <div class="container">
             <div v-if="active && !show" :id="active.slug" class="scroll-to-container">
               <div v-html="parseMarkdown(active.template)"></div>
@@ -117,7 +117,6 @@ DON'T EDIT THIS FILE. USE CONFIG.JSON INSTEAD.
             <section v-if="config.changelog && show == 'changelog'" id="changelog">
               <h2>{{ config.logTitle || 'Changelog' }}</h2>
               <div v-for="change in config.changelog">
-                <hr class="divider">
                 <h2 id="v1-1">{{ change.title }}
                   <small v-if="change.date" class="text-muted">({{ change.date }})</small>
                 </h2>

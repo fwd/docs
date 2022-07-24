@@ -1,4 +1,4 @@
-.dark-mode li, .dark-mode p, .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6, .dark-mode .hljs-string, .dark-mode .hljs-built_in, .dark-mode .hljs-keyword, .dark-mode .hljs-number, .dark-mode .hljs-attribute, .dark-mode .hljs-regexp, .dark-mode .hljs-comment, .dark-mode .nav .nav-item .nav-link, .dark-mode .idocs-navigation .nav .nav .nav-link {
+.dark-mode li, .dark-mode p, .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6, .dark-mode .hljs-string, .dark-mode .hljs-built_in, .dark-mode .hljs-keyword, .dark-mode .hljs-number, .dark-mode .hljs-attribute, .dark-mode .hljs-regexp, .dark-mode .hljs-comment, .dark-mode .nav .nav-item .nav-link, .dark-mode .fwd-navigation .nav .nav .nav-link {
     color: #ffffffdb;
 }
 .dark-mode .nav .nav-item .nav-link {
@@ -20,7 +20,7 @@
     background: #2e3136;
     border-bottom: 1px solid #ffffff17;
 }
-.dark-mode .idocs-navigation .nav .nav .nav-item .nav-link:not(.active):after {
+.dark-mode .fwd-navigation .nav .nav .nav-item .nav-link:not(.active):after {
     border-left: 1px solid rgb(255 255 255 / 15%);
 }
 .dark-mode .accordion .card-body {
@@ -49,16 +49,16 @@
 .dark-mode .sticky-top {
     /*filter: invert(1);*/
 }
-.idocs-content {
+.fwd-content {
     padding-bottom: 50px;
 }
-.dark-mode .preloader, .dark-mode .idocs-navigation, .dark-mode .sticky-top, .dark-mode .idocs-content {
+.dark-mode .preloader, .dark-mode .fwd-navigation, .dark-mode .sticky-top, .dark-mode .fwd-content {
     background: #2f3136;
 }
-.dark-mode .idocs-content {
+.dark-mode .fwd-content {
     padding-bottom: 50px;
 }
-.dark-mode .idocs-navigation {
+.dark-mode .fwd-navigation {
     /*background: #000000;*/
 }
 .dark-mode .primary-menu ul.navbar-nav>li>a:not(.btn) {

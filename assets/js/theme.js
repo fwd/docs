@@ -80,7 +80,7 @@ $('.navbar-toggler').on('click', function() {
 
 $('#sidebarCollapse').on('click', function () {
 	$('#sidebarCollapse span:nth-child(3)').toggleClass('w-50');
-	$('.idocs-navigation').toggleClass('active');
+	$('.fwd-navigation').toggleClass('active');
 });
 
 
@@ -88,7 +88,7 @@ $('#sidebarCollapse').on('click', function () {
    Sections Scroll
 -------------------------- */
 
-$('.smooth-scroll,.idocs-navigation a').on('click', function() {
+$('.smooth-scroll,.fwd-navigation a').on('click', function() {
 	event.preventDefault();
     var sectionTo = $(this).attr('href');
 	$('html, body').stop().animate({
