@@ -76,6 +76,12 @@ var app = new Vue({
         active: false,
         config: {}
     },
+    computed: {
+        logoIsImage() {
+            if (!this.config || !this.config.logo) return
+            return this.config && this.config.logo && this.config.logo.toLowerCase().includes('.png') || this.config.logo.toLowerCase().includes('.jpg') || this.config.logo.toLowerCase().includes('.gif') || this.config.logo.toLowerCase().includes('.jpeg')
+        }
+    },
     mounted() {
 
         var self = this
