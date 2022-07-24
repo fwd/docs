@@ -3,28 +3,27 @@
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
 <h1 align="center" style="font-size: 30px">Easy Docs</h1>
-<h4 align="center" style="font-size: 30px">1 Minute Install • Write in Markdown • Host on Github Pages • Offline Support</h4>
-<h4 align="center" style="font-size: 30px">(Markdown + JSON + HTML)</h4>
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-## Live Demo
-
-<a href="https://docs.nano.to" target="_blank">https://docs.nano.to</a>
-
 ## Features
 
+- 1 Minute Install
 - Write in Markdown
-- Changelog & FAQ Section
 - Local & **Remote** Markdown Files
-- No Installing or Compiling
-- Free Hosting (w/ Github Pages)
+- Host on Github Pages
 - Edit Docs on Github (If you want)
+- Changelog & FAQ Section
+- No Installing or Compiling
 - Light/Dark Mode
 - Offline Support
 - Mobile Optimized
 - Developer Friendly 
 - **Mars Ready 🚀**
+
+## Live Demo
+
+<a href="https://docs.nano.to" target="_blank">https://docs.nano.to</a>
 
 ## ❯ 1. Install
 
