@@ -9,6 +9,7 @@
 ## Features
 
 - 1 Minute Install
+- No Compiling or Installing
 - Write in Markdown
 - Local & **Remote** Markdown Files
 - Host on Github Pages
