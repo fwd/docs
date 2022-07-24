@@ -7,11 +7,11 @@
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-## ❯ Live Demo
+## Live Demo
 
 <a href="https://docs.nano.to" target="_blank">https://docs.nano.to</a>
 
-## ❯ Features
+## Features
 
 - Write in Markdown
 - Changelog & FAQ Section
@@ -24,7 +24,7 @@
 - Mobile Friendly
 - **Space Friendly 🚀**
 
-## ❯ 1. Clone
+## ❯ 1. Install
 
 ```bash
 git clone git@github.com:fwd/docs.git && cd docs
