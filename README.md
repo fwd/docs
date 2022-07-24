@@ -53,7 +53,7 @@ Open ```docs``` in your favorite editor, and serve ```/index.html``` with a serv
 
 ## ❯ 3. Deploy
 
-Remove the .git folder, and add your own. 
+Remove the .git folder, and add your own.
 
 ```bash
 rm -rf .git
@@ -64,16 +64,14 @@ git remote add origin git@github.com:NAME/REPO.git
 git push -u origin "master"
 ```
 
-## ❯ 4. Enable Free Hosting
-
-**Github Pages**
+## ❯ 4. Enable Github Pages
 
 - Github repo must be public
 - Go to [Settings Page](/../../settings/pages)
 - Source → "Master" → "/Root"
 - Save
 
-Website: https://NAME.github.io/REPO
+Your public URL: https://NAME.github.io/REPO
 
 #### Optional: Custom Domain:
 
@@ -81,7 +79,7 @@ Website: https://NAME.github.io/REPO
 - "Custom domain" → "Add Domain"
 - Save
 
-#### Domain DNS Settings
+##### Domain DNS Settings
 
 - Create **A** record that points to: **185.199.108.153**
 - If using Cloudflare, make sure to disable proxy.
