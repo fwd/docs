@@ -22,7 +22,8 @@
 - Edit Docs on Github (If you want)
 - Light/Dark Mode
 - Offline Support
-- Mobile Friendly
+- Mobile Optimized
+- Developer Friendly 
 - **Mars Ready 🚀**
 
 ## ❯ 1. Install
