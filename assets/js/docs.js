@@ -223,9 +223,9 @@ var app = new Vue({
             var url = i.file || i.url
             if (url) {
                 var path = url
-                if (!url.includes('://')) {
-                    url = window.location.origin + ((window.location.pathname.split('/')[1] ? '/' + window.location.pathname.split('/')[1] : '') + '/') + url
-                }
+                // if (!url.includes('://')) {
+                //     url = window.location.origin + ((window.location.pathname.split('/')[1] ? '/' + window.location.pathname.split('/')[1] : '') + '/') + url
+                // }
                 axios.get(url.replace('.md', '') + '.md').then((res) => {
                     i.template = res.data
                     this.active = i
