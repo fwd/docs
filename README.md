@@ -3,7 +3,7 @@
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
 <h1 align="center" style="font-size: 30px">Easy Docs</h1>
-<h4 align="center" style="font-size: 30px">Write in Markdown • No Compiling • Host on Github Pages • Offline Ready</h4>
+<h4 align="center" style="font-size: 30px">Write in Markdown • No Compiling • Host on Github Pages • Offline Support</h4>
 <!-- <h4 align="center" style="font-size: 30px">(HTML + JSON + Markdown)</h4> -->
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
