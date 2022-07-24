@@ -118,6 +118,7 @@ npm run update
 
 **Planned Features**
 
+- Translation
 - Codepen
 - [API Testing](https://petstore3.swagger.io/)
 
