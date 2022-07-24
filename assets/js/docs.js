@@ -207,7 +207,7 @@ var app = new Vue({
           return parsedHeadings
         },
         parseMarkdown(markdownText) {
-            var converter = new showdown.Converter({ openLinksInNewWindow: true, tasklists: true, rawHeaderId: true, })
+            var converter = new showdown.Converter({ tasklists: true, rawHeaderId: true, })
             return converter.makeHtml(markdownText);
         },
         title(text) {
