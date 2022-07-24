@@ -1,14 +1,10 @@
 <!-- 
  _______     ___           _______.____    ____     _______   ______     ______     _______.
-|   ____|   /   \         /       |\   \  /   /    |       \ /  __  \   /      |   /       |
-|  |__     /  ^  \       |   (----` \   \/   /     |  .--.  |  |  |  | |  ,----'  |   (----`
+|   ____|   /   \         /   ____|\   \  /   /    |       \ /  __  \   /      |   /       |
+|  |__     /  ^  \       |   (      \   \/   /     |  .--.  |  |  |  | |  ,----'  |   (----`
 |   __|   /  /_\  \       \   \      \_    _/      |  |  |  |  |  |  | |  |        \   \    
 |  |____ /  _____  \  .----)   |       |  |        |  '--'  |  `--'  | |  `----.----)   |   
 |_______/__/     \__\ |_______/        |__|        |_______/ \______/   \______|_______/    
-=================================================
-MIT License
-https://github.com/fwd/docs
-Copyright © twitter.com/nano2dev
 ==============================================
 DON'T EDIT THIS FILE. USE CONFIG.JSON INSTEAD.
 ==============================================
@@ -47,9 +43,10 @@ DON'T EDIT THIS FILE. USE CONFIG.JSON INSTEAD.
               <span class="w-75"></span>
               <span class="w-50"></span>
             </button>
-            <a class="logo" title="" @click="reload()">
-              {{ config.logo }}
+            <a v-if="logoIsImage" class="logo" title="" @click="reload()">
+                <img :src="config.logo" :style="`max-width: ${config.logoSize || config.size || '100'}px; vertical-align: ${config.logoAlign || config.align || 'middle'};`" alt="">
             </a>
+            <a v-if="!logoIsImage" class="logo" title="" @click="reload()">{{ config.logo }}</a>
             <span v-if="config.version" class="text-2 ml-2">{{ config.version }}</span>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav">
               <span></span>
