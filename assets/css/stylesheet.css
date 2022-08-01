@@ -622,10 +622,18 @@ hr {
 .fwd-navigation.docs-navigation-dark .nav .nav .nav-item .nav-link.active:after {
     border-color: #0366d6;
 }
+
 .fwd-content {
-    padding: 20px 5px !important
+    padding: 30px
     /*margin-top: -110px;*/
 }
+
+@media (max-width: 769px) {
+    .fwd-content {
+        padding: 20px 5px !important;
+    }
+}
+
 /*=== 3.2 Docs Content ===*/
 
 .fwd-content {
