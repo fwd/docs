@@ -2877,6 +2877,6 @@ img[alt="line"] {
     overflow-x: revert;
 }
 
-.hljs code {
+code.hljs {
     width: -webkit-fit-content;
 }
