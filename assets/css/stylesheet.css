@@ -2875,3 +2875,7 @@ img[alt="line"] {
     white-space: inherit;
     overflow-x: revert;
 }
+
+.hljs code {
+    width: -webkit-fit-content;
+}
