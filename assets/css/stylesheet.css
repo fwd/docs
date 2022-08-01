@@ -2872,6 +2872,6 @@ img[alt="line"] {
 }
 
 .hljs {
-    white-space: pre;
-    overflow-x: auto;
+    white-space: inherit;
+    overflow-x: revert;
 }

@@ -32,6 +32,11 @@
     color: #08a698 !important;
     line-height: 26px;
 }
+
+.dark-mode .hljs-comment {
+    color:  rgba(255, 255, 255, 0.33) !important;
+}
+
 .dark-mode .hljs-string {
     /*color: red;*/
 }
