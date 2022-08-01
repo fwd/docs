@@ -29,7 +29,7 @@
 .dark-mode code {
     background-color: #011627;
     border-radius: 4px;
-    color: #08a698 !important
+    color: #08a698 !important;
     line-height: 26px;
 }
 .dark-mode .hljs-string {
