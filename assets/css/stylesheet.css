@@ -624,7 +624,7 @@ hr {
 }
 
 .fwd-content {
-    padding: 30px
+    padding: 30px !important;
     /*margin-top: -110px;*/
 }
 
