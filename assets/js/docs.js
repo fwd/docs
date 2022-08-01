@@ -108,12 +108,9 @@ var app = new Vue({
             this.menu = false
         },
         scrollTop(i, href) {
-            // console.log(i)
-            // window.location.hash = '#' + i.href
             $('html,body').animate({
                 scrollTop: 0
             }, 50);
-            // this.redirect(i.hash)
         },
         scrollTo(i, href) {
             var self = this
@@ -122,7 +119,6 @@ var app = new Vue({
                 scrollTop: $('#' + href).offset() ? $('#' + href).offset().top - 100 : 0
             }, 50, function() {
                 if (href) self.pushtag(href)
-                // if (href) history.pushState({}, '', `#${href}`);
             });
             this.href = href
         },

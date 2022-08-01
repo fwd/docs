@@ -623,7 +623,7 @@ hr {
     border-color: #0366d6;
 }
 .fwd-content {
-    padding: 30px !important;
+    padding: 20px 5px !important
     /*margin-top: -110px;*/
 }
 /*=== 3.2 Docs Content ===*/
@@ -2861,4 +2861,9 @@ ul {
 
 img[alt="line"] {
     height: 30px;
+}
+
+.hljs {
+    white-space: pre;
+    overflow-x: auto;
 }
