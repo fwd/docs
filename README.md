@@ -33,7 +33,7 @@ https://github.com/fwd/docs/generate
 
 ## ❯ 2. Edit Files
 
-You can edit files directly on Github. Or clone the repo, open ```docs``` in your favorite editor, and serve ```/index.html``` with a server. 
+You can edit files directly on Github. Or clone the repo, edit ```pages``` with favorite editor, and serve ```/index.html``` with a server to preview changes. 
 
 **NPM**: ```npm start```
 
