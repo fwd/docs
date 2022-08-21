@@ -27,15 +27,13 @@
 - Developer Friendly 
 - **Mars Ready 🚀**
 
-## ❯ 1. Install
+## ❯ 1. Easy Install (Github Template)
 
-```bash
-git clone git@github.com:fwd/docs.git && cd docs
-```
+https://github.com/fwd/docs/generate
 
-## ❯ 2. Edit
+## ❯ 2. Edit Files
 
-Open ```docs``` in your favorite editor, and serve ```/index.html``` with a server. 
+You can edit files directly on Github. Or clone the repo, open ```docs``` in your favorite editor, and serve ```/index.html``` with a server. 
 
 **NPM**: ```npm start```
 
