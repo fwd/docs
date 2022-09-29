@@ -4,7 +4,7 @@
 	"version": "v0.1",
 	"sections": [
 		{
-			"title": "Get Started",
+			"title": "Local Example",
 			"file": "pages/getting-started.md"
 		},
 		{
@@ -44,8 +44,13 @@
 			"changes": [
 				{
 					"title": "Your information here for added new feature",
-					"type": "success",
-					"label": "ADDED"
+					"type": "warning",
+					"label": "CHANGED"
+				},
+				{
+					"title": "Your information here for added new feature",
+					"type": "danger",
+					"label": "REMOVED"
 				}
 			]
 		}

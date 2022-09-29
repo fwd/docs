@@ -56,9 +56,6 @@
 .fwd-content {
     padding-bottom: 50px;
 }
-.dark-mode .preloader, .dark-mode .fwd-navigation, .dark-mode .sticky-top, .dark-mode .fwd-content {
-    background: #2f3136;
-}
 .dark-mode .fwd-content {
     padding-bottom: 50px;
 }
@@ -68,4 +65,12 @@
 .dark-mode .primary-menu ul.navbar-nav>li>a:not(.btn) {
     color: #FFF;
     /*background: #202327;*/
+}
+.dark-mode body, 
+.dark-mode #main-wrapper, 
+.dark-mode .preloader, 
+.dark-mode .fwd-navigation, 
+.dark-mode .sticky-top, 
+.dark-mode .fwd-content {
+    background: #2f3136;
 }
