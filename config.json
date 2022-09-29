@@ -12,14 +12,7 @@
 			"file": "https://raw.githubusercontent.com/fwd/nano-docs/master/source/checkout.md"
 		}
 	],
-	"menu": [
-		
-		{
-			"title": "Github",
-			"href": "https://github.com/fwd/docs"
-		}
-
-	],
+	"menu": [],
 	"faq": [
 		{
 			"title": "What does royalty free mean?",

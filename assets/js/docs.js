@@ -181,15 +181,17 @@ var app = new Vue({
             return 
         },
         toggleDarkMode() {
-            if (this.darkMode) {
-                this.darkMode = false
+            if (localStorage.getItem('darkMode') == 'true') {
+                // this.darkMode = false
                 localStorage.setItem('darkMode', false)
-                window.location.reload()
+                document.documentElement.classList.remove('dark-mode');
             } else {
-                this.darkMode = true
+                // this.darkMode = true
+                // document.documentElement.classList.remove('dark-mode');
                 document.documentElement.className += ' dark-mode'
                 localStorage.setItem('darkMode', true)
             }
+            // window.location.reload()
         },
         generateLinkMarkup($contentElement) {
           const headings = [...$contentElement.querySelectorAll('h1, h2')]
